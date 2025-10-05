@@ -1,0 +1,4 @@
+template_name: md
+description_is_markdown: true
+with_footer: false
+link_to_reused_ref: false
