@@ -14,7 +14,7 @@ This format is currently in development and subject to change.
 
 ## Reference
 
-[Documentation (HTML)](docs/1.0.0/schema_doc.html)
+[Documentation (HTML)](docs/1.0.0/index.html)
 
 [Documentation (Markdown)](docs/1.0.0/schema_doc.md)
 

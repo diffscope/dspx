@@ -2186,4 +2186,4 @@ Specific value: `"singing"`
 Specific value: `"1.0.0"`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-10-05 at 21:47:16 +0800
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-10-05 at 21:54:47 +0800
