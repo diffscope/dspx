@@ -1,0 +1,799 @@
+{
+    "$defs": {
+        "audioClip": {
+            "additionalProperties": false,
+            "properties": {
+                "control": {
+                    "$ref": "#/$defs/busControl"
+                },
+                "name": {
+                    "title": "Clip Name",
+                    "type": "string"
+                },
+                "path": {
+                    "title": "Audio File Path",
+                    "type": "string"
+                },
+                "time": {
+                    "$ref": "#/$defs/clipTime"
+                },
+                "type": {
+                    "const": "audio",
+                    "title": "Clip Type",
+                    "type": "string"
+                },
+                "workspace": {
+                    "$ref": "#/$defs/workspace"
+                }
+            },
+            "required": [
+                "control",
+                "name",
+                "path",
+                "time",
+                "type",
+                "workspace"
+            ],
+            "title": "Audio Clip",
+            "type": "object"
+        },
+        "busControl": {
+            "additionalProperties": false,
+            "properties": {
+                "gain": {
+                    "title": "Gain",
+                    "type": "number"
+                },
+                "mute": {
+                    "title": "Mute",
+                    "type": "boolean"
+                },
+                "pan": {
+                    "maximum": 1,
+                    "minimum": -1,
+                    "title": "Pan",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "gain",
+                "mute",
+                "pan"
+            ],
+            "title": "Bus Control",
+            "type": "object"
+        },
+        "centShift": {
+            "maximum": 50,
+            "minimum": -50,
+            "title": "Cent Shift",
+            "type": "integer"
+        },
+        "clip": {
+            "oneOf": [
+                {
+                    "$ref": "#/$defs/audioClip"
+                },
+                {
+                    "$ref": "#/$defs/singingClip"
+                }
+            ],
+            "title": "Clip"
+        },
+        "clipTime": {
+            "additionalProperties": false,
+            "properties": {
+                "clipLen": {
+                    "description": "The clipped length relative to `clipStart`",
+                    "minimum": 0,
+                    "title": "Clipped Length (Ticks)",
+                    "type": "integer"
+                },
+                "clipStart": {
+                    "description": "The clipped length relative to `start`",
+                    "minimum": 0,
+                    "title": "Clipped Start (Ticks)",
+                    "type": "integer"
+                },
+                "length": {
+                    "description": "The actual length of the content in the clip",
+                    "minimum": 0,
+                    "title": "Length (Ticks)",
+                    "type": "integer"
+                },
+                "start": {
+                    "description": "The start position of the content in the clip in the timeline",
+                    "minimum": 0,
+                    "title": "Start Position (Ticks)",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "clipLen",
+                "clipStart",
+                "length",
+                "start"
+            ],
+            "title": "Clip Time",
+            "type": "object"
+        },
+        "label": {
+            "additionalProperties": false,
+            "properties": {
+                "pos": {
+                    "minimum": 0,
+                    "title": "Position (Ticks)",
+                    "type": "integer"
+                },
+                "text": {
+                    "title": "Text",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "pos",
+                "text"
+            ],
+            "title": "Label",
+            "type": "object"
+        },
+        "note": {
+            "additionalProperties": false,
+            "properties": {
+                "centShift": {
+                    "$ref": "#/$defs/centShift"
+                },
+                "keyNum": {
+                    "maximum": 127,
+                    "minimum": 0,
+                    "title": "MIDI Key Number",
+                    "type": "integer"
+                },
+                "language": {
+                    "title": "Language (ISO 639-3 Code)",
+                    "type": "string"
+                },
+                "length": {
+                    "minimum": 0,
+                    "title": "Length (Ticks)",
+                    "type": "integer"
+                },
+                "lyric": {
+                    "title": "Lyric",
+                    "type": "string"
+                },
+                "phonemes": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "edited": {
+                            "items": {
+                                "$ref": "#/$defs/phoneme"
+                            },
+                            "title": "Edited Phonemes",
+                            "type": "array"
+                        },
+                        "original": {
+                            "items": {
+                                "$ref": "#/$defs/phoneme"
+                            },
+                            "title": "Original Phonemes Generated by G2P",
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "edited",
+                        "original"
+                    ],
+                    "title": "Phonemes",
+                    "type": "object"
+                },
+                "pos": {
+                    "minimum": 0,
+                    "title": "Position (Ticks)",
+                    "type": "integer"
+                },
+                "pronunciation": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "edited": {
+                            "title": "Edited Pronunciation",
+                            "type": "string"
+                        },
+                        "original": {
+                            "title": "Original Pronunciation Generated by G2P",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "edited",
+                        "original"
+                    ],
+                    "title": "Pronunciation",
+                    "type": "object"
+                },
+                "vibrato": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "amp": {
+                            "minimum": 0,
+                            "title": "Amplitude",
+                            "type": "number"
+                        },
+                        "end": {
+                            "maximum": 1,
+                            "minimum": 0,
+                            "title": "End (Note Length Ratio)",
+                            "type": "number"
+                        },
+                        "freq": {
+                            "title": "Frequency (Hz)",
+                            "type": "number"
+                        },
+                        "offset": {
+                            "title": "Offset of Tune (Semitones)",
+                            "type": "number"
+                        },
+                        "phase": {
+                            "maximum": 1,
+                            "minimum": 0,
+                            "title": "Phase",
+                            "type": "number"
+                        },
+                        "points": {
+                            "items": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "x": {
+                                        "maximum": 1,
+                                        "minimum": 0,
+                                        "title": "X Position (Note Length Ratio)",
+                                        "type": "number"
+                                    },
+                                    "y": {
+                                        "maximum": 1,
+                                        "minimum": 0,
+                                        "title": "Y Position (Amplitude Ratio)",
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "x",
+                                    "y"
+                                ],
+                                "title": "Control Point",
+                                "type": "object"
+                            },
+                            "title": "Control Points",
+                            "type": "array"
+                        },
+                        "start": {
+                            "maximum": 1,
+                            "minimum": 0,
+                            "title": "Start (Note Length Ratio)",
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "amp",
+                        "end",
+                        "freq",
+                        "offset",
+                        "phase",
+                        "points",
+                        "start"
+                    ],
+                    "title": "Vibrato",
+                    "type": "object"
+                },
+                "workspace": {
+                    "$ref": "#/$defs/workspace"
+                }
+            },
+            "required": [
+                "centShift",
+                "keyNum",
+                "language",
+                "length",
+                "lyric",
+                "phonemes",
+                "pos",
+                "pronunciation",
+                "vibrato",
+                "workspace"
+            ],
+            "title": "Note",
+            "type": "object"
+        },
+        "param": {
+            "additionalProperties": false,
+            "properties": {
+                "edited": {
+                    "$ref": "#/$defs/paramCurveList",
+                    "title": "Edited Parameter Curves"
+                },
+                "envelope": {
+                    "$ref": "#/$defs/paramCurveList",
+                    "title": "Envelope Parameter Curves"
+                },
+                "original": {
+                    "$ref": "#/$defs/paramCurveList",
+                    "title": "Original Parameter Curves"
+                }
+            },
+            "required": [
+                "edited",
+                "envelope",
+                "original"
+            ],
+            "title": "Parameter",
+            "type": "object"
+        },
+        "paramCurve": {
+            "oneOf": [
+                {
+                    "$ref": "#/$defs/paramCurveAnchor"
+                },
+                {
+                    "$ref": "#/$defs/paramCurveFree"
+                }
+            ],
+            "title": "Parameter Curve"
+        },
+        "paramCurveAnchor": {
+            "additionalProperties": false,
+            "properties": {
+                "nodes": {
+                    "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "interp": {
+                                "enum": [
+                                    "none",
+                                    "linear",
+                                    "hermite"
+                                ],
+                                "title": "Interpolation Type",
+                                "type": "string"
+                            },
+                            "x": {
+                                "minimum": 0,
+                                "title": "X Position (Ticks)",
+                                "type": "integer"
+                            },
+                            "y": {
+                                "title": "Y Position (Parameter Value)",
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "interp",
+                            "x",
+                            "y"
+                        ],
+                        "title": "Anchor Node",
+                        "type": "object"
+                    },
+                    "title": "Anchor Node List",
+                    "type": "array"
+                },
+                "start": {
+                    "minimum": 0,
+                    "title": "Start Position (Ticks)",
+                    "type": "integer"
+                },
+                "type": {
+                    "const": "anchor",
+                    "title": "Curve Type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "nodes",
+                "start",
+                "type"
+            ],
+            "title": "Anchor Parameter Curve",
+            "type": "object"
+        },
+        "paramCurveFree": {
+            "additionalProperties": false,
+            "properties": {
+                "start": {
+                    "minimum": 0,
+                    "title": "Start Position (Ticks)",
+                    "type": "integer"
+                },
+                "step": {
+                    "const": 5,
+                    "title": "Step (Ticks)",
+                    "type": "integer"
+                },
+                "type": {
+                    "const": "free",
+                    "title": "Curve Type",
+                    "type": "string"
+                },
+                "values": {
+                    "items": {
+                        "title": "Parameter Value",
+                        "type": "integer"
+                    },
+                    "title": "Value List",
+                    "type": "array"
+                }
+            },
+            "required": [
+                "start",
+                "step",
+                "type",
+                "values"
+            ],
+            "title": "Free Parameter Curve",
+            "type": "object"
+        },
+        "paramCurveList": {
+            "items": {
+                "$ref": "#/$defs/paramCurve"
+            },
+            "title": "Parameter Curve List",
+            "type": "array"
+        },
+        "phoneme": {
+            "additionalProperties": false,
+            "properties": {
+                "start": {
+                    "title": "Start Position (Milliseconds from Note On)",
+                    "type": "integer"
+                },
+                "token": {
+                    "title": "Phoneme Token",
+                    "type": "string"
+                },
+                "type": {
+                    "enum": [
+                        "ahead",
+                        "normal",
+                        "final"
+                    ],
+                    "title": "Phoneme Type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "start",
+                "token",
+                "type"
+            ],
+            "title": "Phoneme",
+            "type": "object"
+        },
+        "singingClip": {
+            "additionalProperties": false,
+            "properties": {
+                "control": {
+                    "$ref": "#/$defs/busControl"
+                },
+                "name": {
+                    "title": "Clip Name",
+                    "type": "string"
+                },
+                "notes": {
+                    "items": {
+                        "$ref": "#/$defs/note"
+                    },
+                    "title": "Notes",
+                    "type": "array"
+                },
+                "params": {
+                    "additionalProperties": {
+                        "$ref": "#/$defs/param"
+                    },
+                    "title": "Parameters",
+                    "type": "object"
+                },
+                "sources": {
+                    "additionalProperties": {
+                        "title": "Source",
+                        "type": "object"
+                    },
+                    "title": "Sources",
+                    "type": "object"
+                },
+                "time": {
+                    "$ref": "#/$defs/clipTime"
+                },
+                "type": {
+                    "const": "singing",
+                    "title": "Clip Type",
+                    "type": "string"
+                },
+                "workspace": {
+                    "$ref": "#/$defs/workspace"
+                }
+            },
+            "required": [
+                "control",
+                "name",
+                "notes",
+                "params",
+                "sources",
+                "time",
+                "type",
+                "workspace"
+            ],
+            "title": "Singing Clip",
+            "type": "object"
+        },
+        "tempo": {
+            "additionalProperties": false,
+            "properties": {
+                "pos": {
+                    "minimum": 0,
+                    "title": "Position (Ticks)",
+                    "type": "integer"
+                },
+                "value": {
+                    "maximum": 1000,
+                    "minimum": 10,
+                    "title": "BPM Value",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "pos",
+                "value"
+            ],
+            "title": "Tempo",
+            "type": "object"
+        },
+        "timeSignature": {
+            "additionalProperties": false,
+            "properties": {
+                "denominator": {
+                    "enum": [
+                        1,
+                        2,
+                        4,
+                        8,
+                        16,
+                        32,
+                        64,
+                        128,
+                        256
+                    ],
+                    "title": "Denominator",
+                    "type": "integer"
+                },
+                "index": {
+                    "minimum": 0,
+                    "title": "Measure number (0-based)",
+                    "type": "integer"
+                },
+                "numerator": {
+                    "minimum": 1,
+                    "title": "Numerator",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "denominator",
+                "index",
+                "numerator"
+            ],
+            "title": "Time Signature",
+            "type": "object"
+        },
+        "track": {
+            "additionalProperties": false,
+            "properties": {
+                "clips": {
+                    "items": {
+                        "$ref": "#/$defs/clip"
+                    },
+                    "title": "Clips",
+                    "type": "array"
+                },
+                "color": {
+                    "description": "Hex color value or empty string",
+                    "pattern": "^(#[0-9A-Fa-f]{6}|)$",
+                    "title": "Color",
+                    "type": "string"
+                },
+                "control": {
+                    "$ref": "#/$defs/trackControl"
+                },
+                "name": {
+                    "title": "Track Name",
+                    "type": "string"
+                },
+                "workspace": {
+                    "$ref": "#/$defs/workspace"
+                }
+            },
+            "required": [
+                "clips",
+                "color",
+                "control",
+                "name",
+                "workspace"
+            ],
+            "title": "Track",
+            "type": "object"
+        },
+        "trackControl": {
+            "additionalProperties": false,
+            "properties": {
+                "gain": {
+                    "title": "Gain",
+                    "type": "number"
+                },
+                "mute": {
+                    "title": "Mute",
+                    "type": "boolean"
+                },
+                "pan": {
+                    "maximum": 1,
+                    "minimum": -1,
+                    "title": "Pan",
+                    "type": "number"
+                },
+                "solo": {
+                    "title": "Solo",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "gain",
+                "mute",
+                "pan",
+                "solo"
+            ],
+            "title": "Track Control",
+            "type": "object"
+        },
+        "workspace": {
+            "additionalProperties": {
+                "title": "Workspace Item",
+                "type": "object"
+            },
+            "description": "A flexible object for storing application-specific data.",
+            "title": "Workspace",
+            "type": "object"
+        }
+    },
+    "$id": "https://dspx.diffscope.org/schema/1.0.0/dspx.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+        "content": {
+            "additionalProperties": false,
+            "properties": {
+                "global": {
+                    "additionalProperties": false,
+                    "description": "Global metadata for the project",
+                    "properties": {
+                        "author": {
+                            "title": "Project Author",
+                            "type": "string"
+                        },
+                        "centShift": {
+                            "$ref": "#/$defs/centShift"
+                        },
+                        "editorId": {
+                            "title": "Editor Identifier",
+                            "type": "string"
+                        },
+                        "editorName": {
+                            "title": "Editor Name",
+                            "type": "string"
+                        },
+                        "name": {
+                            "title": "Project Name",
+                            "type": "string"
+                        },
+                        "partial": {
+                            "description": "Indicates that only part of the project data is included, useful for clipboard data. For example, a partial data with type `notes` only contains valid data in the `notes` field of the first clip of the first track.",
+                            "enum": [
+                                null,
+                                "clips",
+                                "labels",
+                                "notes",
+                                "paramCurves",
+                                "tempos",
+                                "tracks",
+                                "workspace"
+                            ],
+                            "title": "Partial Data Type",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "author",
+                        "centShift",
+                        "editorId",
+                        "editorName",
+                        "name"
+                    ],
+                    "title": "Global",
+                    "type": "object"
+                },
+                "master": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "control": {
+                            "$ref": "#/$defs/busControl"
+                        }
+                    },
+                    "required": [
+                        "control"
+                    ],
+                    "title": "Master",
+                    "type": "object"
+                },
+                "timeline": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "labels": {
+                            "items": {
+                                "$ref": "#/$defs/label"
+                            },
+                            "title": "Labels",
+                            "type": "array"
+                        },
+                        "tempos": {
+                            "items": {
+                                "$ref": "#/$defs/tempo"
+                            },
+                            "title": "Tempos",
+                            "type": "array"
+                        },
+                        "timeSignatures": {
+                            "items": {
+                                "$ref": "#/$defs/timeSignature"
+                            },
+                            "title": "Time Signatures",
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "labels",
+                        "tempos",
+                        "timeSignatures"
+                    ],
+                    "title": "Timeline",
+                    "type": "object"
+                },
+                "tracks": {
+                    "items": {
+                        "$ref": "#/$defs/track"
+                    },
+                    "title": "Tracks",
+                    "type": "array"
+                },
+                "workspace": {
+                    "$ref": "#/$defs/workspace"
+                }
+            },
+            "required": [
+                "global",
+                "master",
+                "timeline",
+                "tracks",
+                "workspace"
+            ],
+            "title": "Content",
+            "type": "object"
+        },
+        "version": {
+            "const": "1.0.0",
+            "title": "Version",
+            "type": "string"
+        }
+    },
+    "required": [
+        "content",
+        "version"
+    ],
+    "title": "DiffScope Project Exchange Format",
+    "type": "object"
+}
