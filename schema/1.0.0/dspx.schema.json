@@ -103,7 +103,6 @@
                 },
                 "start": {
                     "description": "The start position of the content in the clip in the timeline",
-                    "minimum": 0,
                     "title": "Start Position (Ticks)",
                     "type": "integer"
                 }
@@ -226,6 +225,7 @@
                             "type": "number"
                         },
                         "freq": {
+                            "minimum": 0,
                             "title": "Frequency (Hz)",
                             "type": "number"
                         },
@@ -244,14 +244,10 @@
                                 "additionalProperties": false,
                                 "properties": {
                                     "x": {
-                                        "maximum": 1,
-                                        "minimum": 0,
                                         "title": "X Position (Note Length Ratio)",
                                         "type": "number"
                                     },
                                     "y": {
-                                        "maximum": 1,
-                                        "minimum": 0,
                                         "title": "Y Position (Amplitude Ratio)",
                                         "type": "number"
                                     }
@@ -377,7 +373,6 @@
                     "type": "array"
                 },
                 "start": {
-                    "minimum": 0,
                     "title": "Start Position (Ticks)",
                     "type": "integer"
                 },
@@ -399,7 +394,6 @@
             "additionalProperties": false,
             "properties": {
                 "start": {
-                    "minimum": 0,
                     "title": "Start Position (Ticks)",
                     "type": "integer"
                 },
@@ -558,8 +552,7 @@
                         16,
                         32,
                         64,
-                        128,
-                        256
+                        128
                     ],
                     "title": "Denominator",
                     "type": "integer"
