@@ -7,7 +7,6 @@
     - [1.1.3. Property `DiffScope Project Exchange Format > content > global > editorId`](#content_global_editorId)
     - [1.1.4. Property `DiffScope Project Exchange Format > content > global > editorName`](#content_global_editorName)
     - [1.1.5. Property `DiffScope Project Exchange Format > content > global > name`](#content_global_name)
-    - [1.1.6. Property `DiffScope Project Exchange Format > content > global > partial`](#content_global_partial)
   - [1.2. Property `DiffScope Project Exchange Format > content > master`](#content_master)
     - [1.2.1. Property `DiffScope Project Exchange Format > content > master > control`](#content_master_control)
       - [1.2.1.1. Property `DiffScope Project Exchange Format > content > master > control > gain`](#content_master_control_gain)
@@ -29,125 +28,132 @@
         - [1.3.3.1.3. Property `DiffScope Project Exchange Format > content > timeline > timeSignatures > Time Signature > numerator`](#content_timeline_timeSignatures_items_numerator)
   - [1.4. Property `DiffScope Project Exchange Format > content > tracks`](#content_tracks)
     - [1.4.1. DiffScope Project Exchange Format > content > tracks > Track](#content_tracks_items)
-      - [1.4.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips`](#content_tracks_items_clips)
-        - [1.4.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip](#content_tracks_items_clips_items)
-          - [1.4.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip`](#content_tracks_items_clips_items_oneOf_i0)
-            - [1.4.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control`](#content_tracks_items_clips_items_oneOf_i0_control)
-              - [1.4.1.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > gain`](#content_tracks_items_clips_items_oneOf_i0_control_gain)
-              - [1.4.1.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > mute`](#content_tracks_items_clips_items_oneOf_i0_control_mute)
-              - [1.4.1.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > pan`](#content_tracks_items_clips_items_oneOf_i0_control_pan)
-            - [1.4.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > name`](#content_tracks_items_clips_items_oneOf_i0_name)
-            - [1.4.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > path`](#content_tracks_items_clips_items_oneOf_i0_path)
-            - [1.4.1.1.1.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time`](#content_tracks_items_clips_items_oneOf_i0_time)
-              - [1.4.1.1.1.1.4.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipLen`](#content_tracks_items_clips_items_oneOf_i0_time_clipLen)
-              - [1.4.1.1.1.1.4.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipStart`](#content_tracks_items_clips_items_oneOf_i0_time_clipStart)
-              - [1.4.1.1.1.1.4.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > length`](#content_tracks_items_clips_items_oneOf_i0_time_length)
-              - [1.4.1.1.1.1.4.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > start`](#content_tracks_items_clips_items_oneOf_i0_time_start)
-            - [1.4.1.1.1.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > type`](#content_tracks_items_clips_items_oneOf_i0_type)
-            - [1.4.1.1.1.1.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > workspace`](#content_tracks_items_clips_items_oneOf_i0_workspace)
-              - [1.4.1.1.1.1.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > workspace > Workspace Item`](#content_tracks_items_clips_items_oneOf_i0_workspace_additionalProperties)
-          - [1.4.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip`](#content_tracks_items_clips_items_oneOf_i1)
-            - [1.4.1.1.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control`](#content_tracks_items_clips_items_oneOf_i1_control)
-              - [1.4.1.1.1.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > gain`](#content_tracks_items_clips_items_oneOf_i1_control_gain)
-              - [1.4.1.1.1.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > mute`](#content_tracks_items_clips_items_oneOf_i1_control_mute)
-              - [1.4.1.1.1.2.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > pan`](#content_tracks_items_clips_items_oneOf_i1_control_pan)
-            - [1.4.1.1.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > name`](#content_tracks_items_clips_items_oneOf_i1_name)
-            - [1.4.1.1.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes`](#content_tracks_items_clips_items_oneOf_i1_notes)
-              - [1.4.1.1.1.2.3.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note](#content_tracks_items_clips_items_oneOf_i1_notes_items)
-                - [1.4.1.1.1.2.3.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > centShift`](#content_tracks_items_clips_items_oneOf_i1_notes_items_centShift)
-                - [1.4.1.1.1.2.3.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > keyNum`](#content_tracks_items_clips_items_oneOf_i1_notes_items_keyNum)
-                - [1.4.1.1.1.2.3.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > language`](#content_tracks_items_clips_items_oneOf_i1_notes_items_language)
-                - [1.4.1.1.1.2.3.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > length`](#content_tracks_items_clips_items_oneOf_i1_notes_items_length)
-                - [1.4.1.1.1.2.3.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > lyric`](#content_tracks_items_clips_items_oneOf_i1_notes_items_lyric)
-                - [1.4.1.1.1.2.3.1.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes)
-                  - [1.4.1.1.1.2.3.1.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited)
-                    - [1.4.1.1.1.2.3.1.6.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items)
-                      - [1.4.1.1.1.2.3.1.6.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > start`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_start)
-                      - [1.4.1.1.1.2.3.1.6.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > token`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_token)
-                      - [1.4.1.1.1.2.3.1.6.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > type`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_type)
-                  - [1.4.1.1.1.2.3.1.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original)
-                    - [1.4.1.1.1.2.3.1.6.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items)
-                      - [1.4.1.1.1.2.3.1.6.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > start`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_start)
-                      - [1.4.1.1.1.2.3.1.6.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > token`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_token)
-                      - [1.4.1.1.1.2.3.1.6.2.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > type`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_type)
-                - [1.4.1.1.1.2.3.1.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pos`](#content_tracks_items_clips_items_oneOf_i1_notes_items_pos)
-                - [1.4.1.1.1.2.3.1.8. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation`](#content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation)
-                  - [1.4.1.1.1.2.3.1.8.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation > edited`](#content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation_edited)
-                  - [1.4.1.1.1.2.3.1.8.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation > original`](#content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation_original)
-                - [1.4.1.1.1.2.3.1.9. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato)
-                  - [1.4.1.1.1.2.3.1.9.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > amp`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_amp)
-                  - [1.4.1.1.1.2.3.1.9.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > end`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_end)
-                  - [1.4.1.1.1.2.3.1.9.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > freq`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_freq)
-                  - [1.4.1.1.1.2.3.1.9.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > offset`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_offset)
-                  - [1.4.1.1.1.2.3.1.9.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > phase`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_phase)
-                  - [1.4.1.1.1.2.3.1.9.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points)
-                    - [1.4.1.1.1.2.3.1.9.6.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > Control Point](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_items)
-                      - [1.4.1.1.1.2.3.1.9.6.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > Control Point > x`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_items_x)
-                      - [1.4.1.1.1.2.3.1.9.6.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > Control Point > y`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_items_y)
-                  - [1.4.1.1.1.2.3.1.9.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > start`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_start)
-                - [1.4.1.1.1.2.3.1.10. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > workspace`](#content_tracks_items_clips_items_oneOf_i1_notes_items_workspace)
-                  - [1.4.1.1.1.2.3.1.10.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > workspace > Workspace Item`](#content_tracks_items_clips_items_oneOf_i1_notes_items_workspace_additionalProperties)
-            - [1.4.1.1.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params`](#content_tracks_items_clips_items_oneOf_i1_params)
-              - [1.4.1.1.1.2.4.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties)
-                - [1.4.1.1.1.2.4.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited)
-                  - [1.4.1.1.1.2.4.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items)
-                    - [1.4.1.1.1.2.4.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0)
-                      - [1.4.1.1.1.2.4.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes)
-                        - [1.4.1.1.1.2.4.1.1.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items)
-                          - [1.4.1.1.1.2.4.1.1.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_interp)
-                          - [1.4.1.1.1.2.4.1.1.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_x)
-                          - [1.4.1.1.1.2.4.1.1.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_y)
-                      - [1.4.1.1.1.2.4.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_start)
-                      - [1.4.1.1.1.2.4.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_type)
-                    - [1.4.1.1.1.2.4.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1)
-                      - [1.4.1.1.1.2.4.1.1.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_start)
-                      - [1.4.1.1.1.2.4.1.1.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > step`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_step)
-                      - [1.4.1.1.1.2.4.1.1.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_type)
-                      - [1.4.1.1.1.2.4.1.1.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > values`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_values)
-                        - [1.4.1.1.1.2.4.1.1.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_values_items)
-                - [1.4.1.1.1.2.4.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope)
-                  - [1.4.1.1.1.2.4.1.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items)
-                    - [1.4.1.1.1.2.4.1.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0)
-                      - [1.4.1.1.1.2.4.1.2.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes)
-                        - [1.4.1.1.1.2.4.1.2.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items)
-                          - [1.4.1.1.1.2.4.1.2.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items_interp)
-                          - [1.4.1.1.1.2.4.1.2.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items_x)
-                          - [1.4.1.1.1.2.4.1.2.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items_y)
-                      - [1.4.1.1.1.2.4.1.2.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_start)
-                      - [1.4.1.1.1.2.4.1.2.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_type)
-                    - [1.4.1.1.1.2.4.1.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1)
-                      - [1.4.1.1.1.2.4.1.2.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_start)
-                      - [1.4.1.1.1.2.4.1.2.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve > step`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_step)
-                      - [1.4.1.1.1.2.4.1.2.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_type)
-                      - [1.4.1.1.1.2.4.1.2.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve > values`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_values)
-                        - [1.4.1.1.1.2.4.1.2.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_values_items)
-                - [1.4.1.1.1.2.4.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original)
-                  - [1.4.1.1.1.2.4.1.3.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items)
-                    - [1.4.1.1.1.2.4.1.3.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0)
-                      - [1.4.1.1.1.2.4.1.3.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes)
-                        - [1.4.1.1.1.2.4.1.3.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items)
-                          - [1.4.1.1.1.2.4.1.3.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_interp)
-                          - [1.4.1.1.1.2.4.1.3.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_x)
-                          - [1.4.1.1.1.2.4.1.3.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_y)
-                      - [1.4.1.1.1.2.4.1.3.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_start)
-                      - [1.4.1.1.1.2.4.1.3.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_type)
-                    - [1.4.1.1.1.2.4.1.3.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1)
-                      - [1.4.1.1.1.2.4.1.3.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_start)
-                      - [1.4.1.1.1.2.4.1.3.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > step`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_step)
-                      - [1.4.1.1.1.2.4.1.3.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_type)
-                      - [1.4.1.1.1.2.4.1.3.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > values`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_values)
-                        - [1.4.1.1.1.2.4.1.3.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_values_items)
-            - [1.4.1.1.1.2.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > sources`](#content_tracks_items_clips_items_oneOf_i1_sources)
-              - [1.4.1.1.1.2.5.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > sources > Source`](#content_tracks_items_clips_items_oneOf_i1_sources_additionalProperties)
-            - [1.4.1.1.1.2.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time`](#content_tracks_items_clips_items_oneOf_i1_time)
-              - [1.4.1.1.1.2.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipLen`](#content_tracks_items_clips_items_oneOf_i1_time_clipLen)
-              - [1.4.1.1.1.2.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipStart`](#content_tracks_items_clips_items_oneOf_i1_time_clipStart)
-              - [1.4.1.1.1.2.6.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > length`](#content_tracks_items_clips_items_oneOf_i1_time_length)
-              - [1.4.1.1.1.2.6.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > start`](#content_tracks_items_clips_items_oneOf_i1_time_start)
-            - [1.4.1.1.1.2.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > type`](#content_tracks_items_clips_items_oneOf_i1_type)
-            - [1.4.1.1.1.2.8. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > workspace`](#content_tracks_items_clips_items_oneOf_i1_workspace)
-              - [1.4.1.1.1.2.8.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > workspace > Workspace Item`](#content_tracks_items_clips_items_oneOf_i1_workspace_additionalProperties)
-      - [1.4.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > color`](#content_tracks_items_color)
+      - [1.4.1.1. The following properties are required](#autogenerated_heading_2)
+      - [1.4.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips`](#content_tracks_items_clips)
+        - [1.4.1.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip](#content_tracks_items_clips_items)
+          - [1.4.1.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip`](#content_tracks_items_clips_items_oneOf_i0)
+            - [1.4.1.2.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control`](#content_tracks_items_clips_items_oneOf_i0_control)
+              - [1.4.1.2.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > gain`](#content_tracks_items_clips_items_oneOf_i0_control_gain)
+              - [1.4.1.2.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > mute`](#content_tracks_items_clips_items_oneOf_i0_control_mute)
+              - [1.4.1.2.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > pan`](#content_tracks_items_clips_items_oneOf_i0_control_pan)
+            - [1.4.1.2.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > name`](#content_tracks_items_clips_items_oneOf_i0_name)
+            - [1.4.1.2.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > path`](#content_tracks_items_clips_items_oneOf_i0_path)
+            - [1.4.1.2.1.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time`](#content_tracks_items_clips_items_oneOf_i0_time)
+              - [1.4.1.2.1.1.4.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipLen`](#content_tracks_items_clips_items_oneOf_i0_time_clipLen)
+              - [1.4.1.2.1.1.4.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipStart`](#content_tracks_items_clips_items_oneOf_i0_time_clipStart)
+              - [1.4.1.2.1.1.4.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > length`](#content_tracks_items_clips_items_oneOf_i0_time_length)
+              - [1.4.1.2.1.1.4.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > start`](#content_tracks_items_clips_items_oneOf_i0_time_start)
+            - [1.4.1.2.1.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > type`](#content_tracks_items_clips_items_oneOf_i0_type)
+            - [1.4.1.2.1.1.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > workspace`](#content_tracks_items_clips_items_oneOf_i0_workspace)
+              - [1.4.1.2.1.1.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > workspace > Workspace Item`](#content_tracks_items_clips_items_oneOf_i0_workspace_additionalProperties)
+          - [1.4.1.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip`](#content_tracks_items_clips_items_oneOf_i1)
+            - [1.4.1.2.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control`](#content_tracks_items_clips_items_oneOf_i1_control)
+              - [1.4.1.2.1.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > gain`](#content_tracks_items_clips_items_oneOf_i1_control_gain)
+              - [1.4.1.2.1.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > mute`](#content_tracks_items_clips_items_oneOf_i1_control_mute)
+              - [1.4.1.2.1.2.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > pan`](#content_tracks_items_clips_items_oneOf_i1_control_pan)
+            - [1.4.1.2.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > name`](#content_tracks_items_clips_items_oneOf_i1_name)
+            - [1.4.1.2.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes`](#content_tracks_items_clips_items_oneOf_i1_notes)
+              - [1.4.1.2.1.2.3.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note](#content_tracks_items_clips_items_oneOf_i1_notes_items)
+                - [1.4.1.2.1.2.3.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > centShift`](#content_tracks_items_clips_items_oneOf_i1_notes_items_centShift)
+                - [1.4.1.2.1.2.3.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > keyNum`](#content_tracks_items_clips_items_oneOf_i1_notes_items_keyNum)
+                - [1.4.1.2.1.2.3.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > language`](#content_tracks_items_clips_items_oneOf_i1_notes_items_language)
+                - [1.4.1.2.1.2.3.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > length`](#content_tracks_items_clips_items_oneOf_i1_notes_items_length)
+                - [1.4.1.2.1.2.3.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > lyric`](#content_tracks_items_clips_items_oneOf_i1_notes_items_lyric)
+                - [1.4.1.2.1.2.3.1.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes)
+                  - [1.4.1.2.1.2.3.1.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited)
+                    - [1.4.1.2.1.2.3.1.6.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items)
+                      - [1.4.1.2.1.2.3.1.6.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > language`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_language)
+                      - [1.4.1.2.1.2.3.1.6.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > start`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_start)
+                      - [1.4.1.2.1.2.3.1.6.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > token`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_token)
+                      - [1.4.1.2.1.2.3.1.6.1.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > onset`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_onset)
+                  - [1.4.1.2.1.2.3.1.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original)
+                    - [1.4.1.2.1.2.3.1.6.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items)
+                      - [1.4.1.2.1.2.3.1.6.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > language`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_language)
+                      - [1.4.1.2.1.2.3.1.6.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > start`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_start)
+                      - [1.4.1.2.1.2.3.1.6.2.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > token`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_token)
+                      - [1.4.1.2.1.2.3.1.6.2.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > onset`](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_onset)
+                - [1.4.1.2.1.2.3.1.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pos`](#content_tracks_items_clips_items_oneOf_i1_notes_items_pos)
+                - [1.4.1.2.1.2.3.1.8. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation`](#content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation)
+                  - [1.4.1.2.1.2.3.1.8.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation > edited`](#content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation_edited)
+                  - [1.4.1.2.1.2.3.1.8.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation > original`](#content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation_original)
+                - [1.4.1.2.1.2.3.1.9. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato)
+                  - [1.4.1.2.1.2.3.1.9.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > amp`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_amp)
+                  - [1.4.1.2.1.2.3.1.9.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > end`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_end)
+                  - [1.4.1.2.1.2.3.1.9.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > freq`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_freq)
+                  - [1.4.1.2.1.2.3.1.9.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > offset`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_offset)
+                  - [1.4.1.2.1.2.3.1.9.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > phase`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_phase)
+                  - [1.4.1.2.1.2.3.1.9.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points)
+                    - [1.4.1.2.1.2.3.1.9.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > amp`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp)
+                      - [1.4.1.2.1.2.3.1.9.6.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > amp > Control Point](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp_items)
+                        - [1.4.1.2.1.2.3.1.9.6.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > amp > Control Point > x`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp_items_x)
+                        - [1.4.1.2.1.2.3.1.9.6.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > amp > Control Point > y`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp_items_y)
+                    - [1.4.1.2.1.2.3.1.9.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > freq`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq)
+                      - [1.4.1.2.1.2.3.1.9.6.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > freq > Control Point](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq_items)
+                        - [1.4.1.2.1.2.3.1.9.6.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > freq > Control Point > x`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq_items_x)
+                        - [1.4.1.2.1.2.3.1.9.6.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > freq > Control Point > y`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq_items_y)
+                  - [1.4.1.2.1.2.3.1.9.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > start`](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_start)
+                - [1.4.1.2.1.2.3.1.10. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > workspace`](#content_tracks_items_clips_items_oneOf_i1_notes_items_workspace)
+                  - [1.4.1.2.1.2.3.1.10.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > workspace > Workspace Item`](#content_tracks_items_clips_items_oneOf_i1_notes_items_workspace_additionalProperties)
+            - [1.4.1.2.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params`](#content_tracks_items_clips_items_oneOf_i1_params)
+              - [1.4.1.2.1.2.4.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties)
+                - [1.4.1.2.1.2.4.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited)
+                  - [1.4.1.2.1.2.4.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items)
+                    - [1.4.1.2.1.2.4.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0)
+                      - [1.4.1.2.1.2.4.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes)
+                        - [1.4.1.2.1.2.4.1.1.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items)
+                          - [1.4.1.2.1.2.4.1.1.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_interp)
+                          - [1.4.1.2.1.2.4.1.1.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_x)
+                          - [1.4.1.2.1.2.4.1.1.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_y)
+                      - [1.4.1.2.1.2.4.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_start)
+                      - [1.4.1.2.1.2.4.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_type)
+                    - [1.4.1.2.1.2.4.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1)
+                      - [1.4.1.2.1.2.4.1.1.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_start)
+                      - [1.4.1.2.1.2.4.1.1.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > step`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_step)
+                      - [1.4.1.2.1.2.4.1.1.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_type)
+                      - [1.4.1.2.1.2.4.1.1.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > values`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_values)
+                        - [1.4.1.2.1.2.4.1.1.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_values_items)
+                - [1.4.1.2.1.2.4.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform)
+                  - [1.4.1.2.1.2.4.1.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items)
+                    - [1.4.1.2.1.2.4.1.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0)
+                      - [1.4.1.2.1.2.4.1.2.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes)
+                        - [1.4.1.2.1.2.4.1.2.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items)
+                          - [1.4.1.2.1.2.4.1.2.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items_interp)
+                          - [1.4.1.2.1.2.4.1.2.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items_x)
+                          - [1.4.1.2.1.2.4.1.2.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items_y)
+                      - [1.4.1.2.1.2.4.1.2.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_start)
+                      - [1.4.1.2.1.2.4.1.2.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_type)
+                    - [1.4.1.2.1.2.4.1.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1)
+                      - [1.4.1.2.1.2.4.1.2.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_start)
+                      - [1.4.1.2.1.2.4.1.2.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve > step`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_step)
+                      - [1.4.1.2.1.2.4.1.2.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_type)
+                      - [1.4.1.2.1.2.4.1.2.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve > values`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_values)
+                        - [1.4.1.2.1.2.4.1.2.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_values_items)
+                - [1.4.1.2.1.2.4.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original)
+                  - [1.4.1.2.1.2.4.1.3.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items)
+                    - [1.4.1.2.1.2.4.1.3.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0)
+                      - [1.4.1.2.1.2.4.1.3.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes)
+                        - [1.4.1.2.1.2.4.1.3.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items)
+                          - [1.4.1.2.1.2.4.1.3.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_interp)
+                          - [1.4.1.2.1.2.4.1.3.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_x)
+                          - [1.4.1.2.1.2.4.1.3.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_y)
+                      - [1.4.1.2.1.2.4.1.3.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_start)
+                      - [1.4.1.2.1.2.4.1.3.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_type)
+                    - [1.4.1.2.1.2.4.1.3.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1)
+                      - [1.4.1.2.1.2.4.1.3.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > start`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_start)
+                      - [1.4.1.2.1.2.4.1.3.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > step`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_step)
+                      - [1.4.1.2.1.2.4.1.3.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > type`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_type)
+                      - [1.4.1.2.1.2.4.1.3.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > values`](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_values)
+                        - [1.4.1.2.1.2.4.1.3.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_values_items)
+            - [1.4.1.2.1.2.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > sources`](#content_tracks_items_clips_items_oneOf_i1_sources)
+              - [1.4.1.2.1.2.5.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > sources > Source`](#content_tracks_items_clips_items_oneOf_i1_sources_additionalProperties)
+            - [1.4.1.2.1.2.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time`](#content_tracks_items_clips_items_oneOf_i1_time)
+              - [1.4.1.2.1.2.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipLen`](#content_tracks_items_clips_items_oneOf_i1_time_clipLen)
+              - [1.4.1.2.1.2.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipStart`](#content_tracks_items_clips_items_oneOf_i1_time_clipStart)
+              - [1.4.1.2.1.2.6.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > length`](#content_tracks_items_clips_items_oneOf_i1_time_length)
+              - [1.4.1.2.1.2.6.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > start`](#content_tracks_items_clips_items_oneOf_i1_time_start)
+            - [1.4.1.2.1.2.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > type`](#content_tracks_items_clips_items_oneOf_i1_type)
+            - [1.4.1.2.1.2.8. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > workspace`](#content_tracks_items_clips_items_oneOf_i1_workspace)
+              - [1.4.1.2.1.2.8.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > workspace > Workspace Item`](#content_tracks_items_clips_items_oneOf_i1_workspace_additionalProperties)
       - [1.4.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > control`](#content_tracks_items_control)
         - [1.4.1.3.1. Property `DiffScope Project Exchange Format > content > tracks > Track > control > gain`](#content_tracks_items_control_gain)
         - [1.4.1.3.2. Property `DiffScope Project Exchange Format > content > tracks > Track > control > mute`](#content_tracks_items_control_mute)
@@ -203,14 +209,13 @@
 
 **Description:** Global metadata for the project
 
-| Property                                    | Pattern | Type                     | Deprecated | Definition           | Title/Description |
-| ------------------------------------------- | ------- | ------------------------ | ---------- | -------------------- | ----------------- |
-| + [author](#content_global_author )         | No      | string                   | No         | -                    | Project Author    |
-| + [centShift](#content_global_centShift )   | No      | integer                  | No         | In #/$defs/centShift | Cent Shift        |
-| + [editorId](#content_global_editorId )     | No      | string                   | No         | -                    | Editor Identifier |
-| + [editorName](#content_global_editorName ) | No      | string                   | No         | -                    | Editor Name       |
-| + [name](#content_global_name )             | No      | string                   | No         | -                    | Project Name      |
-| - [partial](#content_global_partial )       | No      | enum (of null or string) | No         | -                    | Partial Data Type |
+| Property                                    | Pattern | Type    | Deprecated | Definition           | Title/Description |
+| ------------------------------------------- | ------- | ------- | ---------- | -------------------- | ----------------- |
+| + [author](#content_global_author )         | No      | string  | No         | -                    | Project Author    |
+| + [centShift](#content_global_centShift )   | No      | integer | No         | In #/$defs/centShift | Cent Shift        |
+| + [editorId](#content_global_editorId )     | No      | string  | No         | -                    | Editor Identifier |
+| + [editorName](#content_global_editorName ) | No      | string  | No         | -                    | Editor Name       |
+| + [name](#content_global_name )             | No      | string  | No         | -                    | Project Name      |
 
 #### <a name="content_global_author"></a>1.1.1. Property `DiffScope Project Exchange Format > content > global > author`
 
@@ -262,27 +267,6 @@
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
-
-#### <a name="content_global_partial"></a>1.1.6. Property `DiffScope Project Exchange Format > content > global > partial`
-
-**Title:** Partial Data Type
-
-|              |                            |
-| ------------ | -------------------------- |
-| **Type**     | `enum (of null or string)` |
-| **Required** | No                         |
-
-**Description:** Indicates that only part of the project data is included, useful for clipboard data. For example, a partial data with type `notes` only contains valid data in the `notes` field of the first clip of the first track.
-
-Must be one of:
-* null
-* "clips"
-* "labels"
-* "notes"
-* "paramCurves"
-* "tempos"
-* "tracks"
-* "workspace"
 
 ### <a name="content_master"></a>1.2. Property `DiffScope Project Exchange Format > content > master`
 
@@ -457,7 +441,7 @@ Must be one of:
 | Property                                         | Pattern | Type    | Deprecated | Definition | Title/Description |
 | ------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
 | + [pos](#content_timeline_tempos_items_pos )     | No      | integer | No         | -          | Position (Ticks)  |
-| + [value](#content_timeline_tempos_items_value ) | No      | number  | No         | -          | BPM Value         |
+| + [value](#content_timeline_tempos_items_value ) | No      | number  | No         | -          | Tempo Value       |
 
 ###### <a name="content_timeline_tempos_items_pos"></a>1.3.2.1.1. Property `DiffScope Project Exchange Format > content > timeline > tempos > Tempo > pos`
 
@@ -474,12 +458,14 @@ Must be one of:
 
 ###### <a name="content_timeline_tempos_items_value"></a>1.3.2.1.2. Property `DiffScope Project Exchange Format > content > timeline > tempos > Tempo > value`
 
-**Title:** BPM Value
+**Title:** Tempo Value
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `number` |
 | **Required** | Yes      |
+
+**Description:** Quarter notes per minute
 
 | Restrictions |           |
 | ------------ | --------- |
@@ -604,12 +590,14 @@ Must be one of:
 | Property                                        | Pattern | Type   | Deprecated | Definition              | Title/Description |
 | ----------------------------------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
 | + [clips](#content_tracks_items_clips )         | No      | array  | No         | -                       | Clips             |
-| + [color](#content_tracks_items_color )         | No      | string | No         | -                       | Color             |
 | + [control](#content_tracks_items_control )     | No      | object | No         | In #/$defs/trackControl | Track Control     |
 | + [name](#content_tracks_items_name )           | No      | string | No         | -                       | Track Name        |
 | + [workspace](#content_tracks_items_workspace ) | No      | object | No         | In #/$defs/workspace    | Workspace         |
 
-##### <a name="content_tracks_items_clips"></a>1.4.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips`
+##### <a name="autogenerated_heading_2"></a>1.4.1.1. The following properties are required
+* color
+
+##### <a name="content_tracks_items_clips"></a>1.4.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips`
 
 **Title:** Clips
 
@@ -630,7 +618,7 @@ Must be one of:
 | ----------------------------------------- | ----------- |
 | [Clip](#content_tracks_items_clips_items) | -           |
 
-###### <a name="content_tracks_items_clips_items"></a>1.4.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip
+###### <a name="content_tracks_items_clips_items"></a>1.4.1.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip
 
 **Title:** Clip
 
@@ -646,7 +634,7 @@ Must be one of:
 | [Audio Clip](#content_tracks_items_clips_items_oneOf_i0)   |
 | [Singing Clip](#content_tracks_items_clips_items_oneOf_i1) |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0"></a>1.4.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip`
+###### <a name="content_tracks_items_clips_items_oneOf_i0"></a>1.4.1.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip`
 
 **Title:** Audio Clip
 
@@ -666,7 +654,7 @@ Must be one of:
 | + [type](#content_tracks_items_clips_items_oneOf_i0_type )           | No      | const  | No         | -                     | Clip Type         |
 | + [workspace](#content_tracks_items_clips_items_oneOf_i0_workspace ) | No      | object | No         | In #/$defs/workspace  | Workspace         |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_control"></a>1.4.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_control"></a>1.4.1.2.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control`
 
 **Title:** Bus Control
 
@@ -683,7 +671,7 @@ Must be one of:
 | + [mute](#content_tracks_items_clips_items_oneOf_i0_control_mute ) | No      | boolean | No         | -          | Mute              |
 | + [pan](#content_tracks_items_clips_items_oneOf_i0_control_pan )   | No      | number  | No         | -          | Pan               |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_control_gain"></a>1.4.1.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > gain`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_control_gain"></a>1.4.1.2.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > gain`
 
 **Title:** Gain
 
@@ -692,7 +680,7 @@ Must be one of:
 | **Type**     | `number` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_control_mute"></a>1.4.1.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > mute`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_control_mute"></a>1.4.1.2.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > mute`
 
 **Title:** Mute
 
@@ -701,7 +689,7 @@ Must be one of:
 | **Type**     | `boolean` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_control_pan"></a>1.4.1.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > pan`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_control_pan"></a>1.4.1.2.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > control > pan`
 
 **Title:** Pan
 
@@ -715,7 +703,7 @@ Must be one of:
 | **Minimum**  | &ge; -1 |
 | **Maximum**  | &le; 1  |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_name"></a>1.4.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > name`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_name"></a>1.4.1.2.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > name`
 
 **Title:** Clip Name
 
@@ -724,7 +712,7 @@ Must be one of:
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_path"></a>1.4.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > path`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_path"></a>1.4.1.2.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > path`
 
 **Title:** Audio File Path
 
@@ -733,7 +721,7 @@ Must be one of:
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_time"></a>1.4.1.1.1.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_time"></a>1.4.1.2.1.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time`
 
 **Title:** Clip Time
 
@@ -751,7 +739,7 @@ Must be one of:
 | + [length](#content_tracks_items_clips_items_oneOf_i0_time_length )       | No      | integer | No         | -          | Length (Ticks)         |
 | + [start](#content_tracks_items_clips_items_oneOf_i0_time_start )         | No      | integer | No         | -          | Start Position (Ticks) |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_time_clipLen"></a>1.4.1.1.1.1.4.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipLen`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_time_clipLen"></a>1.4.1.2.1.1.4.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipLen`
 
 **Title:** Clipped Length (Ticks)
 
@@ -766,7 +754,7 @@ Must be one of:
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_time_clipStart"></a>1.4.1.1.1.1.4.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipStart`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_time_clipStart"></a>1.4.1.2.1.1.4.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipStart`
 
 **Title:** Clipped Start (Ticks)
 
@@ -781,7 +769,7 @@ Must be one of:
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_time_length"></a>1.4.1.1.1.1.4.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > length`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_time_length"></a>1.4.1.2.1.1.4.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > length`
 
 **Title:** Length (Ticks)
 
@@ -796,7 +784,7 @@ Must be one of:
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_time_start"></a>1.4.1.1.1.1.4.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_time_start"></a>1.4.1.2.1.1.4.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > start`
 
 **Title:** Start Position (Ticks)
 
@@ -807,7 +795,7 @@ Must be one of:
 
 **Description:** The start position of the content in the clip in the timeline
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_type"></a>1.4.1.1.1.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > type`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_type"></a>1.4.1.2.1.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > type`
 
 **Title:** Clip Type
 
@@ -818,7 +806,7 @@ Must be one of:
 
 Specific value: `"audio"`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_workspace"></a>1.4.1.1.1.1.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > workspace`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_workspace"></a>1.4.1.2.1.1.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > workspace`
 
 **Title:** Workspace
 
@@ -835,7 +823,7 @@ Specific value: `"audio"`
 | -------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [](#content_tracks_items_clips_items_oneOf_i0_workspace_additionalProperties ) | No      | object | No         | -          | Workspace Item    |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_workspace_additionalProperties"></a>1.4.1.1.1.1.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > workspace > Workspace Item`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_workspace_additionalProperties"></a>1.4.1.2.1.1.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > workspace > Workspace Item`
 
 **Title:** Workspace Item
 
@@ -845,7 +833,7 @@ Specific value: `"audio"`
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1"></a>1.4.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip`
+###### <a name="content_tracks_items_clips_items_oneOf_i1"></a>1.4.1.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip`
 
 **Title:** Singing Clip
 
@@ -867,7 +855,7 @@ Specific value: `"audio"`
 | + [type](#content_tracks_items_clips_items_oneOf_i1_type )           | No      | const  | No         | -                     | Clip Type         |
 | + [workspace](#content_tracks_items_clips_items_oneOf_i1_workspace ) | No      | object | No         | In #/$defs/workspace  | Workspace         |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_control"></a>1.4.1.1.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_control"></a>1.4.1.2.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control`
 
 **Title:** Bus Control
 
@@ -884,7 +872,7 @@ Specific value: `"audio"`
 | + [mute](#content_tracks_items_clips_items_oneOf_i1_control_mute ) | No      | boolean | No         | -          | Mute              |
 | + [pan](#content_tracks_items_clips_items_oneOf_i1_control_pan )   | No      | number  | No         | -          | Pan               |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_control_gain"></a>1.4.1.1.1.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > gain`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_control_gain"></a>1.4.1.2.1.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > gain`
 
 **Title:** Gain
 
@@ -893,7 +881,7 @@ Specific value: `"audio"`
 | **Type**     | `number` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_control_mute"></a>1.4.1.1.1.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > mute`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_control_mute"></a>1.4.1.2.1.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > mute`
 
 **Title:** Mute
 
@@ -902,7 +890,7 @@ Specific value: `"audio"`
 | **Type**     | `boolean` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_control_pan"></a>1.4.1.1.1.2.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > pan`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_control_pan"></a>1.4.1.2.1.2.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > control > pan`
 
 **Title:** Pan
 
@@ -916,7 +904,7 @@ Specific value: `"audio"`
 | **Minimum**  | &ge; -1 |
 | **Maximum**  | &le; 1  |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_name"></a>1.4.1.1.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > name`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_name"></a>1.4.1.2.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > name`
 
 **Title:** Clip Name
 
@@ -925,7 +913,7 @@ Specific value: `"audio"`
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes"></a>1.4.1.1.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes"></a>1.4.1.2.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes`
 
 **Title:** Notes
 
@@ -946,7 +934,7 @@ Specific value: `"audio"`
 | -------------------------------------------------------------- | ----------- |
 | [Note](#content_tracks_items_clips_items_oneOf_i1_notes_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items"></a>1.4.1.1.1.2.3.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items"></a>1.4.1.2.1.2.3.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note
 
 **Title:** Note
 
@@ -970,7 +958,7 @@ Specific value: `"audio"`
 | + [vibrato](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato )             | No      | object  | No         | -                    | Vibrato                   |
 | + [workspace](#content_tracks_items_clips_items_oneOf_i1_notes_items_workspace )         | No      | object  | No         | In #/$defs/workspace | Workspace                 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_centShift"></a>1.4.1.1.1.2.3.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > centShift`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_centShift"></a>1.4.1.2.1.2.3.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > centShift`
 
 **Title:** Cent Shift
 
@@ -985,7 +973,7 @@ Specific value: `"audio"`
 | **Minimum**  | &ge; -50 |
 | **Maximum**  | &le; 50  |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_keyNum"></a>1.4.1.1.1.2.3.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > keyNum`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_keyNum"></a>1.4.1.2.1.2.3.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > keyNum`
 
 **Title:** MIDI Key Number
 
@@ -999,7 +987,7 @@ Specific value: `"audio"`
 | **Minimum**  | &ge; 0   |
 | **Maximum**  | &le; 127 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_language"></a>1.4.1.1.1.2.3.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > language`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_language"></a>1.4.1.2.1.2.3.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > language`
 
 **Title:** Language (ISO 639-3 Code)
 
@@ -1008,7 +996,7 @@ Specific value: `"audio"`
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_length"></a>1.4.1.1.1.2.3.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > length`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_length"></a>1.4.1.2.1.2.3.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > length`
 
 **Title:** Length (Ticks)
 
@@ -1021,7 +1009,7 @@ Specific value: `"audio"`
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_lyric"></a>1.4.1.1.1.2.3.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > lyric`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_lyric"></a>1.4.1.2.1.2.3.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > lyric`
 
 **Title:** Lyric
 
@@ -1030,7 +1018,7 @@ Specific value: `"audio"`
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes"></a>1.4.1.1.1.2.3.1.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes"></a>1.4.1.2.1.2.3.1.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes`
 
 **Title:** Phonemes
 
@@ -1040,12 +1028,12 @@ Specific value: `"audio"`
 | **Required**              | Yes         |
 | **Additional properties** | Not allowed |
 
-| Property                                                                                | Pattern | Type  | Deprecated | Definition | Title/Description                  |
-| --------------------------------------------------------------------------------------- | ------- | ----- | ---------- | ---------- | ---------------------------------- |
-| + [edited](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited )     | No      | array | No         | -          | Edited Phonemes                    |
-| + [original](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original ) | No      | array | No         | -          | Original Phonemes Generated by G2P |
+| Property                                                                                | Pattern | Type  | Deprecated | Definition | Title/Description                              |
+| --------------------------------------------------------------------------------------- | ------- | ----- | ---------- | ---------- | ---------------------------------------------- |
+| + [edited](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited )     | No      | array | No         | -          | Edited Phonemes                                |
+| + [original](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original ) | No      | array | No         | -          | Original Phonemes Generated from Pronunciation |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited"></a>1.4.1.1.1.2.3.1.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited"></a>1.4.1.2.1.2.3.1.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited`
 
 **Title:** Edited Phonemes
 
@@ -1066,7 +1054,7 @@ Specific value: `"audio"`
 | --------------------------------------------------------------------------------------- | ----------- |
 | [Phoneme](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items"></a>1.4.1.1.1.2.3.1.6.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items"></a>1.4.1.2.1.2.3.1.6.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme
 
 **Title:** Phoneme
 
@@ -1077,13 +1065,23 @@ Specific value: `"audio"`
 | **Additional properties** | Not allowed     |
 | **Defined in**            | #/$defs/phoneme |
 
-| Property                                                                                       | Pattern | Type             | Deprecated | Definition | Title/Description                          |
-| ---------------------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
-| + [start](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_start ) | No      | integer          | No         | -          | Start Position (Milliseconds from Note On) |
-| + [token](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_token ) | No      | string           | No         | -          | Phoneme Token                              |
-| + [type](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_type )   | No      | enum (of string) | No         | -          | Phoneme Type                               |
+| Property                                                                                             | Pattern | Type    | Deprecated | Definition | Title/Description                          |
+| ---------------------------------------------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ------------------------------------------ |
+| + [language](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_language ) | No      | string  | No         | -          | Language (ISO 639-3 Code)                  |
+| + [start](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_start )       | No      | integer | No         | -          | Start Position (Milliseconds from Note On) |
+| + [token](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_token )       | No      | string  | No         | -          | Phoneme Token                              |
+| + [onset](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_onset )       | No      | boolean | No         | -          | Onset Flag                                 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_start"></a>1.4.1.1.1.2.3.1.6.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_language"></a>1.4.1.2.1.2.3.1.6.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > language`
+
+**Title:** Language (ISO 639-3 Code)
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
+
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_start"></a>1.4.1.2.1.2.3.1.6.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > start`
 
 **Title:** Start Position (Milliseconds from Note On)
 
@@ -1092,7 +1090,7 @@ Specific value: `"audio"`
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_token"></a>1.4.1.1.1.2.3.1.6.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > token`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_token"></a>1.4.1.2.1.2.3.1.6.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > token`
 
 **Title:** Phoneme Token
 
@@ -1101,23 +1099,18 @@ Specific value: `"audio"`
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_type"></a>1.4.1.1.1.2.3.1.6.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > type`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_onset"></a>1.4.1.2.1.2.3.1.6.1.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > onset`
 
-**Title:** Phoneme Type
+**Title:** Onset Flag
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | Yes                |
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | Yes       |
 
-Must be one of:
-* "ahead"
-* "normal"
-* "final"
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original"></a>1.4.1.2.1.2.3.1.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original"></a>1.4.1.1.1.2.3.1.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original`
-
-**Title:** Original Phonemes Generated by G2P
+**Title:** Original Phonemes Generated from Pronunciation
 
 |              |         |
 | ------------ | ------- |
@@ -1136,7 +1129,7 @@ Must be one of:
 | ----------------------------------------------------------------------------------------- | ----------- |
 | [Phoneme](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items"></a>1.4.1.1.1.2.3.1.6.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items"></a>1.4.1.2.1.2.3.1.6.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme
 
 **Title:** Phoneme
 
@@ -1147,13 +1140,23 @@ Must be one of:
 | **Additional properties** | Not allowed     |
 | **Defined in**            | #/$defs/phoneme |
 
-| Property                                                                                         | Pattern | Type             | Deprecated | Definition | Title/Description                          |
-| ------------------------------------------------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
-| + [start](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_start ) | No      | integer          | No         | -          | Start Position (Milliseconds from Note On) |
-| + [token](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_token ) | No      | string           | No         | -          | Phoneme Token                              |
-| + [type](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_type )   | No      | enum (of string) | No         | -          | Phoneme Type                               |
+| Property                                                                                               | Pattern | Type    | Deprecated | Definition | Title/Description                          |
+| ------------------------------------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ------------------------------------------ |
+| + [language](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_language ) | No      | string  | No         | -          | Language (ISO 639-3 Code)                  |
+| + [start](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_start )       | No      | integer | No         | -          | Start Position (Milliseconds from Note On) |
+| + [token](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_token )       | No      | string  | No         | -          | Phoneme Token                              |
+| + [onset](#content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_onset )       | No      | boolean | No         | -          | Onset Flag                                 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_start"></a>1.4.1.1.1.2.3.1.6.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_language"></a>1.4.1.2.1.2.3.1.6.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > language`
+
+**Title:** Language (ISO 639-3 Code)
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
+
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_start"></a>1.4.1.2.1.2.3.1.6.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > start`
 
 **Title:** Start Position (Milliseconds from Note On)
 
@@ -1162,7 +1165,7 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_token"></a>1.4.1.1.1.2.3.1.6.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > token`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_token"></a>1.4.1.2.1.2.3.1.6.2.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > token`
 
 **Title:** Phoneme Token
 
@@ -1171,21 +1174,16 @@ Must be one of:
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_type"></a>1.4.1.1.1.2.3.1.6.2.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > type`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_onset"></a>1.4.1.2.1.2.3.1.6.2.1.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > onset`
 
-**Title:** Phoneme Type
+**Title:** Onset Flag
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | Yes                |
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | Yes       |
 
-Must be one of:
-* "ahead"
-* "normal"
-* "final"
-
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_pos"></a>1.4.1.1.1.2.3.1.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pos`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_pos"></a>1.4.1.2.1.2.3.1.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pos`
 
 **Title:** Position (Ticks)
 
@@ -1198,7 +1196,7 @@ Must be one of:
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation"></a>1.4.1.1.1.2.3.1.8. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation"></a>1.4.1.2.1.2.3.1.8. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation`
 
 **Title:** Pronunciation
 
@@ -1213,7 +1211,7 @@ Must be one of:
 | + [edited](#content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation_edited )     | No      | string | No         | -          | Edited Pronunciation                    |
 | + [original](#content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation_original ) | No      | string | No         | -          | Original Pronunciation Generated by G2P |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation_edited"></a>1.4.1.1.1.2.3.1.8.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation > edited`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation_edited"></a>1.4.1.2.1.2.3.1.8.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation > edited`
 
 **Title:** Edited Pronunciation
 
@@ -1222,7 +1220,7 @@ Must be one of:
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation_original"></a>1.4.1.1.1.2.3.1.8.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation > original`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation_original"></a>1.4.1.2.1.2.3.1.8.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation > original`
 
 **Title:** Original Pronunciation Generated by G2P
 
@@ -1231,7 +1229,7 @@ Must be one of:
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato"></a>1.4.1.1.1.2.3.1.9. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato"></a>1.4.1.2.1.2.3.1.9. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato`
 
 **Title:** Vibrato
 
@@ -1241,30 +1239,30 @@ Must be one of:
 | **Required**              | Yes         |
 | **Additional properties** | Not allowed |
 
-| Property                                                                           | Pattern | Type            | Deprecated | Definition | Title/Description          |
-| ---------------------------------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | -------------------------- |
-| + [amp](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_amp )       | No      | number          | No         | -          | Amplitude                  |
-| + [end](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_end )       | No      | number          | No         | -          | End (Note Length Ratio)    |
-| + [freq](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_freq )     | No      | number          | No         | -          | Frequency (Hz)             |
-| + [offset](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_offset ) | No      | number          | No         | -          | Offset of Tune (Semitones) |
-| + [phase](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_phase )   | No      | number          | No         | -          | Phase                      |
-| + [points](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points ) | No      | array of object | No         | -          | Control Points             |
-| + [start](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_start )   | No      | number          | No         | -          | Start (Note Length Ratio)  |
+| Property                                                                           | Pattern | Type    | Deprecated | Definition | Title/Description         |
+| ---------------------------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ------------------------- |
+| + [amp](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_amp )       | No      | integer | No         | -          | Amplitude (Cent)          |
+| + [end](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_end )       | No      | number  | No         | -          | End (Note Length Ratio)   |
+| + [freq](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_freq )     | No      | number  | No         | -          | Frequency (Hz)            |
+| + [offset](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_offset ) | No      | integer | No         | -          | Offset of Tune (Cent)     |
+| + [phase](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_phase )   | No      | number  | No         | -          | Phase                     |
+| + [points](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points ) | No      | object  | No         | -          | -                         |
+| + [start](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_start )   | No      | number  | No         | -          | Start (Note Length Ratio) |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_amp"></a>1.4.1.1.1.2.3.1.9.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > amp`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_amp"></a>1.4.1.2.1.2.3.1.9.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > amp`
 
-**Title:** Amplitude
+**Title:** Amplitude (Cent)
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `number` |
-| **Required** | Yes      |
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | Yes       |
 
 | Restrictions |        |
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_end"></a>1.4.1.1.1.2.3.1.9.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > end`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_end"></a>1.4.1.2.1.2.3.1.9.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > end`
 
 **Title:** End (Note Length Ratio)
 
@@ -1278,7 +1276,7 @@ Must be one of:
 | **Minimum**  | &ge; 0 |
 | **Maximum**  | &le; 1 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_freq"></a>1.4.1.1.1.2.3.1.9.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > freq`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_freq"></a>1.4.1.2.1.2.3.1.9.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > freq`
 
 **Title:** Frequency (Hz)
 
@@ -1291,16 +1289,16 @@ Must be one of:
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_offset"></a>1.4.1.1.1.2.3.1.9.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > offset`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_offset"></a>1.4.1.2.1.2.3.1.9.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > offset`
 
-**Title:** Offset of Tune (Semitones)
+**Title:** Offset of Tune (Cent)
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `number` |
-| **Required** | Yes      |
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_phase"></a>1.4.1.1.1.2.3.1.9.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > phase`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_phase"></a>1.4.1.2.1.2.3.1.9.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > phase`
 
 **Title:** Phase
 
@@ -1314,14 +1312,28 @@ Must be one of:
 | **Minimum**  | &ge; 0 |
 | **Maximum**  | &le; 1 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points"></a>1.4.1.1.1.2.3.1.9.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points"></a>1.4.1.2.1.2.3.1.9.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points`
+
+|                           |             |
+| ------------------------- | ----------- |
+| **Type**                  | `object`    |
+| **Required**              | Yes         |
+| **Additional properties** | Not allowed |
+
+| Property                                                                              | Pattern | Type            | Deprecated | Definition               | Title/Description |
+| ------------------------------------------------------------------------------------- | ------- | --------------- | ---------- | ------------------------ | ----------------- |
+| + [amp](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp )   | No      | array of object | No         | In #/$defs/controlPoints | Control Points    |
+| + [freq](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq ) | No      | array of object | No         | In #/$defs/controlPoints | Control Points    |
+
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp"></a>1.4.1.2.1.2.3.1.9.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > amp`
 
 **Title:** Control Points
 
-|              |                   |
-| ------------ | ----------------- |
-| **Type**     | `array of object` |
-| **Required** | Yes               |
+|                |                       |
+| -------------- | --------------------- |
+| **Type**       | `array of object`     |
+| **Required**   | Yes                   |
+| **Defined in** | #/$defs/controlPoints |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -1331,11 +1343,11 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                                                              | Description |
-| -------------------------------------------------------------------------------------------- | ----------- |
-| [Control Point](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_items) | -           |
+| Each item of this array must be                                                                  | Description |
+| ------------------------------------------------------------------------------------------------ | ----------- |
+| [Control Point](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_items"></a>1.4.1.1.1.2.3.1.9.6.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > Control Point
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp_items"></a>1.4.1.2.1.2.3.1.9.6.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > amp > Control Point
 
 **Title:** Control Point
 
@@ -1345,12 +1357,12 @@ Must be one of:
 | **Required**              | No          |
 | **Additional properties** | Not allowed |
 
-| Property                                                                              | Pattern | Type   | Deprecated | Definition | Title/Description              |
-| ------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ------------------------------ |
-| + [x](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_items_x ) | No      | number | No         | -          | X Position (Note Length Ratio) |
-| + [y](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_items_y ) | No      | number | No         | -          | Y Position (Amplitude Ratio)   |
+| Property                                                                                  | Pattern | Type   | Deprecated | Definition | Title/Description              |
+| ----------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ------------------------------ |
+| + [x](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp_items_x ) | No      | number | No         | -          | X Position (Note Length Ratio) |
+| + [y](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp_items_y ) | No      | number | No         | -          | Y Position (Ratio)             |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_items_x"></a>1.4.1.1.1.2.3.1.9.6.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > Control Point > x`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp_items_x"></a>1.4.1.2.1.2.3.1.9.6.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > amp > Control Point > x`
 
 **Title:** X Position (Note Length Ratio)
 
@@ -1359,16 +1371,71 @@ Must be one of:
 | **Type**     | `number` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_items_y"></a>1.4.1.1.1.2.3.1.9.6.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > Control Point > y`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_amp_items_y"></a>1.4.1.2.1.2.3.1.9.6.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > amp > Control Point > y`
 
-**Title:** Y Position (Amplitude Ratio)
+**Title:** Y Position (Ratio)
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `number` |
 | **Required** | Yes      |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_start"></a>1.4.1.1.1.2.3.1.9.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq"></a>1.4.1.2.1.2.3.1.9.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > freq`
+
+**Title:** Control Points
+
+|                |                       |
+| -------------- | --------------------- |
+| **Type**       | `array of object`     |
+| **Required**   | Yes                   |
+| **Defined in** | #/$defs/controlPoints |
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                                                   | Description |
+| ------------------------------------------------------------------------------------------------- | ----------- |
+| [Control Point](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq_items) | -           |
+
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq_items"></a>1.4.1.2.1.2.3.1.9.6.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > freq > Control Point
+
+**Title:** Control Point
+
+|                           |             |
+| ------------------------- | ----------- |
+| **Type**                  | `object`    |
+| **Required**              | No          |
+| **Additional properties** | Not allowed |
+
+| Property                                                                                   | Pattern | Type   | Deprecated | Definition | Title/Description              |
+| ------------------------------------------------------------------------------------------ | ------- | ------ | ---------- | ---------- | ------------------------------ |
+| + [x](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq_items_x ) | No      | number | No         | -          | X Position (Note Length Ratio) |
+| + [y](#content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq_items_y ) | No      | number | No         | -          | Y Position (Ratio)             |
+
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq_items_x"></a>1.4.1.2.1.2.3.1.9.6.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > freq > Control Point > x`
+
+**Title:** X Position (Note Length Ratio)
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | Yes      |
+
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_points_freq_items_y"></a>1.4.1.2.1.2.3.1.9.6.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > points > freq > Control Point > y`
+
+**Title:** Y Position (Ratio)
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | Yes      |
+
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_start"></a>1.4.1.2.1.2.3.1.9.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > start`
 
 **Title:** Start (Note Length Ratio)
 
@@ -1382,7 +1449,7 @@ Must be one of:
 | **Minimum**  | &ge; 0 |
 | **Maximum**  | &le; 1 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_workspace"></a>1.4.1.1.1.2.3.1.10. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > workspace`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_workspace"></a>1.4.1.2.1.2.3.1.10. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > workspace`
 
 **Title:** Workspace
 
@@ -1399,7 +1466,7 @@ Must be one of:
 | -------------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [](#content_tracks_items_clips_items_oneOf_i1_notes_items_workspace_additionalProperties ) | No      | object | No         | -          | Workspace Item    |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_workspace_additionalProperties"></a>1.4.1.1.1.2.3.1.10.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > workspace > Workspace Item`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_workspace_additionalProperties"></a>1.4.1.2.1.2.3.1.10.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > workspace > Workspace Item`
 
 **Title:** Workspace Item
 
@@ -1409,7 +1476,7 @@ Must be one of:
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params"></a>1.4.1.1.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params"></a>1.4.1.2.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params`
 
 **Title:** Parameters
 
@@ -1423,7 +1490,7 @@ Must be one of:
 | ----------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------------- | ----------------- |
 | - [](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties ) | No      | object | No         | In #/$defs/param | Parameter         |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties"></a>1.4.1.1.1.2.4.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties"></a>1.4.1.2.1.2.4.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter`
 
 **Title:** Parameter
 
@@ -1434,13 +1501,13 @@ Must be one of:
 | **Additional properties** | Not allowed   |
 | **Defined in**            | #/$defs/param |
 
-| Property                                                                                       | Pattern | Type  | Deprecated | Definition                | Title/Description         |
-| ---------------------------------------------------------------------------------------------- | ------- | ----- | ---------- | ------------------------- | ------------------------- |
-| + [edited](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited )     | No      | array | No         | In #/$defs/paramCurveList | Edited Parameter Curves   |
-| + [envelope](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope ) | No      | array | No         | In #/$defs/paramCurveList | Envelope Parameter Curves |
-| + [original](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original ) | No      | array | No         | In #/$defs/paramCurveList | Original Parameter Curves |
+| Property                                                                                         | Pattern | Type  | Deprecated | Definition                | Title/Description          |
+| ------------------------------------------------------------------------------------------------ | ------- | ----- | ---------- | ------------------------- | -------------------------- |
+| + [edited](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited )       | No      | array | No         | In #/$defs/paramCurveList | Edited Parameter Curves    |
+| + [transform](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform ) | No      | array | No         | In #/$defs/paramCurveList | Transform Parameter Curves |
+| + [original](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original )   | No      | array | No         | In #/$defs/paramCurveList | Original Parameter Curves  |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited"></a>1.4.1.1.1.2.4.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited"></a>1.4.1.2.1.2.4.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited`
 
 **Title:** Edited Parameter Curves
 
@@ -1462,7 +1529,7 @@ Must be one of:
 | ------------------------------------------------------------------------------------------------------ | ----------- |
 | [Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items"></a>1.4.1.1.1.2.4.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items"></a>1.4.1.2.1.2.4.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve
 
 **Title:** Parameter Curve
 
@@ -1478,7 +1545,7 @@ Must be one of:
 | [Anchor Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0) |
 | [Free Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1)   |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0"></a>1.4.1.1.1.2.4.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0"></a>1.4.1.2.1.2.4.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve`
 
 **Title:** Anchor Parameter Curve
 
@@ -1495,7 +1562,7 @@ Must be one of:
 | + [start](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_start ) | No      | integer         | No         | -          | Start Position (Ticks) |
 | + [type](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_type )   | No      | const           | No         | -          | Curve Type             |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes"></a>1.4.1.1.1.2.4.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes"></a>1.4.1.2.1.2.4.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`
 
 **Title:** Anchor Node List
 
@@ -1516,7 +1583,7 @@ Must be one of:
 | ----------------------------------------------------------------------------------------------------------------------- | ----------- |
 | [Anchor Node](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items"></a>1.4.1.1.1.2.4.1.1.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items"></a>1.4.1.2.1.2.4.1.1.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node
 
 **Title:** Anchor Node
 
@@ -1532,7 +1599,7 @@ Must be one of:
 | + [x](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_x )           | No      | integer          | No         | -          | X Position (Ticks)           |
 | + [y](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_y )           | No      | integer          | No         | -          | Y Position (Parameter Value) |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_interp"></a>1.4.1.1.1.2.4.1.1.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_interp"></a>1.4.1.2.1.2.4.1.1.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`
 
 **Title:** Interpolation Type
 
@@ -1546,7 +1613,7 @@ Must be one of:
 * "linear"
 * "hermite"
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_x"></a>1.4.1.1.1.2.4.1.1.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_x"></a>1.4.1.2.1.2.4.1.1.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`
 
 **Title:** X Position (Ticks)
 
@@ -1559,7 +1626,7 @@ Must be one of:
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_y"></a>1.4.1.1.1.2.4.1.1.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_y"></a>1.4.1.2.1.2.4.1.1.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`
 
 **Title:** Y Position (Parameter Value)
 
@@ -1568,7 +1635,7 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_start"></a>1.4.1.1.1.2.4.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_start"></a>1.4.1.2.1.2.4.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > start`
 
 **Title:** Start Position (Ticks)
 
@@ -1577,7 +1644,7 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_type"></a>1.4.1.1.1.2.4.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > type`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_type"></a>1.4.1.2.1.2.4.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > type`
 
 **Title:** Curve Type
 
@@ -1588,7 +1655,7 @@ Must be one of:
 
 Specific value: `"anchor"`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1"></a>1.4.1.1.1.2.4.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1"></a>1.4.1.2.1.2.4.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve`
 
 **Title:** Free Parameter Curve
 
@@ -1606,7 +1673,7 @@ Specific value: `"anchor"`
 | + [type](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_type )     | No      | const            | No         | -          | Curve Type             |
 | + [values](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_values ) | No      | array of integer | No         | -          | Value List             |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_start"></a>1.4.1.1.1.2.4.1.1.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_start"></a>1.4.1.2.1.2.4.1.1.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > start`
 
 **Title:** Start Position (Ticks)
 
@@ -1615,7 +1682,7 @@ Specific value: `"anchor"`
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_step"></a>1.4.1.1.1.2.4.1.1.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > step`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_step"></a>1.4.1.2.1.2.4.1.1.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > step`
 
 **Title:** Step (Ticks)
 
@@ -1626,7 +1693,7 @@ Specific value: `"anchor"`
 
 Specific value: `5`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_type"></a>1.4.1.1.1.2.4.1.1.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > type`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_type"></a>1.4.1.2.1.2.4.1.1.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > type`
 
 **Title:** Curve Type
 
@@ -1637,7 +1704,7 @@ Specific value: `5`
 
 Specific value: `"free"`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_values"></a>1.4.1.1.1.2.4.1.1.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > values`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_values"></a>1.4.1.2.1.2.4.1.1.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > values`
 
 **Title:** Value List
 
@@ -1658,7 +1725,7 @@ Specific value: `"free"`
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | [Parameter Value](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_values_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_values_items"></a>1.4.1.1.1.2.4.1.1.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_values_items"></a>1.4.1.2.1.2.4.1.1.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value
 
 **Title:** Parameter Value
 
@@ -1667,9 +1734,9 @@ Specific value: `"free"`
 | **Type**     | `integer` |
 | **Required** | No        |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope"></a>1.4.1.1.1.2.4.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform"></a>1.4.1.2.1.2.4.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform`
 
-**Title:** Envelope Parameter Curves
+**Title:** Transform Parameter Curves
 
 |                |                        |
 | -------------- | ---------------------- |
@@ -1685,11 +1752,11 @@ Specific value: `"free"`
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                                                                          | Description |
-| -------------------------------------------------------------------------------------------------------- | ----------- |
-| [Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items) | -           |
+| Each item of this array must be                                                                           | Description |
+| --------------------------------------------------------------------------------------------------------- | ----------- |
+| [Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items"></a>1.4.1.1.1.2.4.1.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items"></a>1.4.1.2.1.2.4.1.2.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve
 
 **Title:** Parameter Curve
 
@@ -1700,12 +1767,12 @@ Specific value: `"free"`
 | **Additional properties** | Any type allowed   |
 | **Defined in**            | #/$defs/paramCurve |
 
-| One of(Option)                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| [Anchor Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0) |
-| [Free Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1)   |
+| One of(Option)                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------- |
+| [Anchor Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0) |
+| [Free Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1)   |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0"></a>1.4.1.1.1.2.4.1.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0"></a>1.4.1.2.1.2.4.1.2.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve`
 
 **Title:** Anchor Parameter Curve
 
@@ -1716,13 +1783,13 @@ Specific value: `"free"`
 | **Additional properties** | Not allowed              |
 | **Defined in**            | #/$defs/paramCurveAnchor |
 
-| Property                                                                                                         | Pattern | Type            | Deprecated | Definition | Title/Description      |
-| ---------------------------------------------------------------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | ---------------------- |
-| + [nodes](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes ) | No      | array of object | No         | -          | Anchor Node List       |
-| + [start](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_start ) | No      | integer         | No         | -          | Start Position (Ticks) |
-| + [type](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_type )   | No      | const           | No         | -          | Curve Type             |
+| Property                                                                                                          | Pattern | Type            | Deprecated | Definition | Title/Description      |
+| ----------------------------------------------------------------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | ---------------------- |
+| + [nodes](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes ) | No      | array of object | No         | -          | Anchor Node List       |
+| + [start](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_start ) | No      | integer         | No         | -          | Start Position (Ticks) |
+| + [type](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_type )   | No      | const           | No         | -          | Curve Type             |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes"></a>1.4.1.1.1.2.4.1.2.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes"></a>1.4.1.2.1.2.4.1.2.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`
 
 **Title:** Anchor Node List
 
@@ -1739,11 +1806,11 @@ Specific value: `"free"`
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                                                                                           | Description |
-| ------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [Anchor Node](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items) | -           |
+| Each item of this array must be                                                                                            | Description |
+| -------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [Anchor Node](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items"></a>1.4.1.1.1.2.4.1.2.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items"></a>1.4.1.2.1.2.4.1.2.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node
 
 **Title:** Anchor Node
 
@@ -1753,13 +1820,13 @@ Specific value: `"free"`
 | **Required**              | No          |
 | **Additional properties** | Not allowed |
 
-| Property                                                                                                                       | Pattern | Type             | Deprecated | Definition | Title/Description            |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ---------------------------- |
-| + [interp](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items_interp ) | No      | enum (of string) | No         | -          | Interpolation Type           |
-| + [x](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items_x )           | No      | integer          | No         | -          | X Position (Ticks)           |
-| + [y](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items_y )           | No      | integer          | No         | -          | Y Position (Parameter Value) |
+| Property                                                                                                                        | Pattern | Type             | Deprecated | Definition | Title/Description            |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ---------------------------- |
+| + [interp](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items_interp ) | No      | enum (of string) | No         | -          | Interpolation Type           |
+| + [x](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items_x )           | No      | integer          | No         | -          | X Position (Ticks)           |
+| + [y](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items_y )           | No      | integer          | No         | -          | Y Position (Parameter Value) |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items_interp"></a>1.4.1.1.1.2.4.1.2.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items_interp"></a>1.4.1.2.1.2.4.1.2.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`
 
 **Title:** Interpolation Type
 
@@ -1773,7 +1840,7 @@ Must be one of:
 * "linear"
 * "hermite"
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items_x"></a>1.4.1.1.1.2.4.1.2.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items_x"></a>1.4.1.2.1.2.4.1.2.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`
 
 **Title:** X Position (Ticks)
 
@@ -1786,7 +1853,7 @@ Must be one of:
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_nodes_items_y"></a>1.4.1.1.1.2.4.1.2.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items_y"></a>1.4.1.2.1.2.4.1.2.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`
 
 **Title:** Y Position (Parameter Value)
 
@@ -1795,7 +1862,7 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_start"></a>1.4.1.1.1.2.4.1.2.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_start"></a>1.4.1.2.1.2.4.1.2.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > start`
 
 **Title:** Start Position (Ticks)
 
@@ -1804,7 +1871,7 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i0_type"></a>1.4.1.1.1.2.4.1.2.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Anchor Parameter Curve > type`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_type"></a>1.4.1.2.1.2.4.1.2.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > type`
 
 **Title:** Curve Type
 
@@ -1815,7 +1882,7 @@ Must be one of:
 
 Specific value: `"anchor"`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1"></a>1.4.1.1.1.2.4.1.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1"></a>1.4.1.2.1.2.4.1.2.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve`
 
 **Title:** Free Parameter Curve
 
@@ -1826,14 +1893,14 @@ Specific value: `"anchor"`
 | **Additional properties** | Not allowed            |
 | **Defined in**            | #/$defs/paramCurveFree |
 
-| Property                                                                                                           | Pattern | Type             | Deprecated | Definition | Title/Description      |
-| ------------------------------------------------------------------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ---------------------- |
-| + [start](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_start )   | No      | integer          | No         | -          | Start Position (Ticks) |
-| + [step](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_step )     | No      | const            | No         | -          | Step (Ticks)           |
-| + [type](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_type )     | No      | const            | No         | -          | Curve Type             |
-| + [values](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_values ) | No      | array of integer | No         | -          | Value List             |
+| Property                                                                                                            | Pattern | Type             | Deprecated | Definition | Title/Description      |
+| ------------------------------------------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ---------------------- |
+| + [start](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_start )   | No      | integer          | No         | -          | Start Position (Ticks) |
+| + [step](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_step )     | No      | const            | No         | -          | Step (Ticks)           |
+| + [type](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_type )     | No      | const            | No         | -          | Curve Type             |
+| + [values](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_values ) | No      | array of integer | No         | -          | Value List             |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_start"></a>1.4.1.1.1.2.4.1.2.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_start"></a>1.4.1.2.1.2.4.1.2.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve > start`
 
 **Title:** Start Position (Ticks)
 
@@ -1842,7 +1909,7 @@ Specific value: `"anchor"`
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_step"></a>1.4.1.1.1.2.4.1.2.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve > step`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_step"></a>1.4.1.2.1.2.4.1.2.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve > step`
 
 **Title:** Step (Ticks)
 
@@ -1853,7 +1920,7 @@ Specific value: `"anchor"`
 
 Specific value: `5`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_type"></a>1.4.1.1.1.2.4.1.2.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve > type`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_type"></a>1.4.1.2.1.2.4.1.2.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve > type`
 
 **Title:** Curve Type
 
@@ -1864,7 +1931,7 @@ Specific value: `5`
 
 Specific value: `"free"`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_values"></a>1.4.1.1.1.2.4.1.2.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve > values`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_values"></a>1.4.1.2.1.2.4.1.2.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve > values`
 
 **Title:** Value List
 
@@ -1881,11 +1948,11 @@ Specific value: `"free"`
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                                                                                                | Description |
-| ------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| [Parameter Value](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_values_items) | -           |
+| Each item of this array must be                                                                                                 | Description |
+| ------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [Parameter Value](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_values_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_envelope_items_oneOf_i1_values_items"></a>1.4.1.1.1.2.4.1.2.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > envelope > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_values_items"></a>1.4.1.2.1.2.4.1.2.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value
 
 **Title:** Parameter Value
 
@@ -1894,7 +1961,7 @@ Specific value: `"free"`
 | **Type**     | `integer` |
 | **Required** | No        |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original"></a>1.4.1.1.1.2.4.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original"></a>1.4.1.2.1.2.4.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original`
 
 **Title:** Original Parameter Curves
 
@@ -1916,7 +1983,7 @@ Specific value: `"free"`
 | -------------------------------------------------------------------------------------------------------- | ----------- |
 | [Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items"></a>1.4.1.1.1.2.4.1.3.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items"></a>1.4.1.2.1.2.4.1.3.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve
 
 **Title:** Parameter Curve
 
@@ -1932,7 +1999,7 @@ Specific value: `"free"`
 | [Anchor Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0) |
 | [Free Parameter Curve](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1)   |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0"></a>1.4.1.1.1.2.4.1.3.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0"></a>1.4.1.2.1.2.4.1.3.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve`
 
 **Title:** Anchor Parameter Curve
 
@@ -1949,7 +2016,7 @@ Specific value: `"free"`
 | + [start](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_start ) | No      | integer         | No         | -          | Start Position (Ticks) |
 | + [type](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_type )   | No      | const           | No         | -          | Curve Type             |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes"></a>1.4.1.1.1.2.4.1.3.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes"></a>1.4.1.2.1.2.4.1.3.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes`
 
 **Title:** Anchor Node List
 
@@ -1970,7 +2037,7 @@ Specific value: `"free"`
 | ------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | [Anchor Node](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items"></a>1.4.1.1.1.2.4.1.3.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items"></a>1.4.1.2.1.2.4.1.3.1.1.1.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node
 
 **Title:** Anchor Node
 
@@ -1986,7 +2053,7 @@ Specific value: `"free"`
 | + [x](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_x )           | No      | integer          | No         | -          | X Position (Ticks)           |
 | + [y](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_y )           | No      | integer          | No         | -          | Y Position (Parameter Value) |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_interp"></a>1.4.1.1.1.2.4.1.3.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_interp"></a>1.4.1.2.1.2.4.1.3.1.1.1.1.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > interp`
 
 **Title:** Interpolation Type
 
@@ -2000,7 +2067,7 @@ Must be one of:
 * "linear"
 * "hermite"
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_x"></a>1.4.1.1.1.2.4.1.3.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_x"></a>1.4.1.2.1.2.4.1.3.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > x`
 
 **Title:** X Position (Ticks)
 
@@ -2013,7 +2080,7 @@ Must be one of:
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_y"></a>1.4.1.1.1.2.4.1.3.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_y"></a>1.4.1.2.1.2.4.1.3.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`
 
 **Title:** Y Position (Parameter Value)
 
@@ -2022,7 +2089,7 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_start"></a>1.4.1.1.1.2.4.1.3.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_start"></a>1.4.1.2.1.2.4.1.3.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > start`
 
 **Title:** Start Position (Ticks)
 
@@ -2031,7 +2098,7 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_type"></a>1.4.1.1.1.2.4.1.3.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > type`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_type"></a>1.4.1.2.1.2.4.1.3.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > type`
 
 **Title:** Curve Type
 
@@ -2042,7 +2109,7 @@ Must be one of:
 
 Specific value: `"anchor"`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1"></a>1.4.1.1.1.2.4.1.3.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1"></a>1.4.1.2.1.2.4.1.3.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve`
 
 **Title:** Free Parameter Curve
 
@@ -2060,7 +2127,7 @@ Specific value: `"anchor"`
 | + [type](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_type )     | No      | const            | No         | -          | Curve Type             |
 | + [values](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_values ) | No      | array of integer | No         | -          | Value List             |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_start"></a>1.4.1.1.1.2.4.1.3.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_start"></a>1.4.1.2.1.2.4.1.3.1.2.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > start`
 
 **Title:** Start Position (Ticks)
 
@@ -2069,7 +2136,7 @@ Specific value: `"anchor"`
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_step"></a>1.4.1.1.1.2.4.1.3.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > step`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_step"></a>1.4.1.2.1.2.4.1.3.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > step`
 
 **Title:** Step (Ticks)
 
@@ -2080,7 +2147,7 @@ Specific value: `"anchor"`
 
 Specific value: `5`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_type"></a>1.4.1.1.1.2.4.1.3.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > type`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_type"></a>1.4.1.2.1.2.4.1.3.1.2.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > type`
 
 **Title:** Curve Type
 
@@ -2091,7 +2158,7 @@ Specific value: `5`
 
 Specific value: `"free"`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_values"></a>1.4.1.1.1.2.4.1.3.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > values`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_values"></a>1.4.1.2.1.2.4.1.3.1.2.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > values`
 
 **Title:** Value List
 
@@ -2112,7 +2179,7 @@ Specific value: `"free"`
 | ------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | [Parameter Value](#content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_values_items) | -           |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_values_items"></a>1.4.1.1.1.2.4.1.3.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value
+###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_values_items"></a>1.4.1.2.1.2.4.1.3.1.2.4.1. DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > values > Parameter Value
 
 **Title:** Parameter Value
 
@@ -2121,7 +2188,7 @@ Specific value: `"free"`
 | **Type**     | `integer` |
 | **Required** | No        |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_sources"></a>1.4.1.1.1.2.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > sources`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_sources"></a>1.4.1.2.1.2.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > sources`
 
 **Title:** Sources
 
@@ -2135,7 +2202,7 @@ Specific value: `"free"`
 | ------------------------------------------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [](#content_tracks_items_clips_items_oneOf_i1_sources_additionalProperties ) | No      | object | No         | -          | Source            |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_sources_additionalProperties"></a>1.4.1.1.1.2.5.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > sources > Source`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_sources_additionalProperties"></a>1.4.1.2.1.2.5.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > sources > Source`
 
 **Title:** Source
 
@@ -2145,7 +2212,7 @@ Specific value: `"free"`
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_time"></a>1.4.1.1.1.2.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_time"></a>1.4.1.2.1.2.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time`
 
 **Title:** Clip Time
 
@@ -2163,7 +2230,7 @@ Specific value: `"free"`
 | + [length](#content_tracks_items_clips_items_oneOf_i1_time_length )       | No      | integer | No         | -          | Length (Ticks)         |
 | + [start](#content_tracks_items_clips_items_oneOf_i1_time_start )         | No      | integer | No         | -          | Start Position (Ticks) |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_time_clipLen"></a>1.4.1.1.1.2.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipLen`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_time_clipLen"></a>1.4.1.2.1.2.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipLen`
 
 **Title:** Clipped Length (Ticks)
 
@@ -2178,7 +2245,7 @@ Specific value: `"free"`
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_time_clipStart"></a>1.4.1.1.1.2.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipStart`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_time_clipStart"></a>1.4.1.2.1.2.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipStart`
 
 **Title:** Clipped Start (Ticks)
 
@@ -2193,7 +2260,7 @@ Specific value: `"free"`
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_time_length"></a>1.4.1.1.1.2.6.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > length`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_time_length"></a>1.4.1.2.1.2.6.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > length`
 
 **Title:** Length (Ticks)
 
@@ -2208,7 +2275,7 @@ Specific value: `"free"`
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_time_start"></a>1.4.1.1.1.2.6.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_time_start"></a>1.4.1.2.1.2.6.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > start`
 
 **Title:** Start Position (Ticks)
 
@@ -2219,7 +2286,7 @@ Specific value: `"free"`
 
 **Description:** The start position of the content in the clip in the timeline
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_type"></a>1.4.1.1.1.2.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > type`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_type"></a>1.4.1.2.1.2.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > type`
 
 **Title:** Clip Type
 
@@ -2230,7 +2297,7 @@ Specific value: `"free"`
 
 Specific value: `"singing"`
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_workspace"></a>1.4.1.1.1.2.8. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > workspace`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_workspace"></a>1.4.1.2.1.2.8. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > workspace`
 
 **Title:** Workspace
 
@@ -2247,7 +2314,7 @@ Specific value: `"singing"`
 | -------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [](#content_tracks_items_clips_items_oneOf_i1_workspace_additionalProperties ) | No      | object | No         | -          | Workspace Item    |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_workspace_additionalProperties"></a>1.4.1.1.1.2.8.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > workspace > Workspace Item`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_workspace_additionalProperties"></a>1.4.1.2.1.2.8.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > workspace > Workspace Item`
 
 **Title:** Workspace Item
 
@@ -2256,21 +2323,6 @@ Specific value: `"singing"`
 | **Type**                  | `object`         |
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
-
-##### <a name="content_tracks_items_color"></a>1.4.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > color`
-
-**Title:** Color
-
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
-
-**Description:** Hex color value or empty string
-
-| Restrictions                      |                                                                                                          |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Must match regular expression** | ```^(#[0-9A-Fa-f]{6}\|)$``` [Test](https://regex101.com/?regex=%5E%28%23%5B0-9A-Fa-f%5D%7B6%7D%7C%29%24) |
 
 ##### <a name="content_tracks_items_control"></a>1.4.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > control`
 
