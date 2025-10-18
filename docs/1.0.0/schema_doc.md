@@ -392,9 +392,10 @@
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_timeline_labels_items_text"></a>1.3.1.1.2. Property `DiffScope Project Exchange Format > content > timeline > labels > Label > text`
 
@@ -451,9 +452,10 @@
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_timeline_tempos_items_value"></a>1.3.2.1.2. Property `DiffScope Project Exchange Format > content > timeline > tempos > Tempo > value`
 
@@ -537,9 +539,10 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_timeline_timeSignatures_items_numerator"></a>1.3.3.1.3. Property `DiffScope Project Exchange Format > content > timeline > timeSignatures > Time Signature > numerator`
 
@@ -550,9 +553,10 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 1 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 1          |
+| **Maximum**  | &le; 2147483647 |
 
 ### <a name="content_tracks"></a>1.4. Property `DiffScope Project Exchange Format > content > tracks`
 
@@ -746,9 +750,10 @@ Must be one of:
 
 **Description:** The clipped length relative to `clipStart`
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i0_time_clipStart"></a>1.4.1.1.1.1.4.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipStart`
 
@@ -761,9 +766,10 @@ Must be one of:
 
 **Description:** The clipped length relative to `start`
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i0_time_length"></a>1.4.1.1.1.1.4.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > length`
 
@@ -776,9 +782,10 @@ Must be one of:
 
 **Description:** The actual length of the content in the clip
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i0_time_start"></a>1.4.1.1.1.1.4.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > start`
 
@@ -790,6 +797,11 @@ Must be one of:
 | **Required** | Yes       |
 
 **Description:** The start position of the content in the clip in the timeline
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i0_type"></a>1.4.1.1.1.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > type`
 
@@ -1001,9 +1013,10 @@ Specific value: `"audio"`
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_lyric"></a>1.4.1.1.1.2.3.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > lyric`
 
@@ -1086,6 +1099,11 @@ Specific value: `"audio"`
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
+
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_edited_items_token"></a>1.4.1.1.1.2.3.1.6.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > edited > Phoneme > token`
 
 **Title:** Phoneme Token
@@ -1161,6 +1179,11 @@ Specific value: `"audio"`
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
+
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_phonemes_original_items_token"></a>1.4.1.1.1.2.3.1.6.2.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > phonemes > original > Phoneme > token`
 
 **Title:** Phoneme Token
@@ -1188,9 +1211,10 @@ Specific value: `"audio"`
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_pronunciation"></a>1.4.1.1.1.2.3.1.8. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > pronunciation`
 
@@ -1254,9 +1278,10 @@ Specific value: `"audio"`
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_end"></a>1.4.1.1.1.2.3.1.9.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > end`
 
@@ -1293,6 +1318,11 @@ Specific value: `"audio"`
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | Yes       |
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_notes_items_vibrato_phase"></a>1.4.1.1.1.2.3.1.9.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > notes > Note > vibrato > phase`
 
@@ -1618,9 +1648,10 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_nodes_items_y"></a>1.4.1.1.1.2.4.1.1.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`
 
@@ -1631,6 +1662,11 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
+
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_start"></a>1.4.1.1.1.2.4.1.1.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > start`
 
 **Title:** Start Position (Ticks)
@@ -1639,6 +1675,11 @@ Must be one of:
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | Yes       |
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i0_type"></a>1.4.1.1.1.2.4.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Anchor Parameter Curve > type`
 
@@ -1677,6 +1718,11 @@ Specific value: `"anchor"`
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | Yes       |
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_edited_items_oneOf_i1_step"></a>1.4.1.1.1.2.4.1.1.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > edited > Parameter Curve > oneOf > Free Parameter Curve > step`
 
@@ -1729,6 +1775,11 @@ Specific value: `"free"`
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | No        |
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform"></a>1.4.1.1.1.2.4.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform`
 
@@ -1845,9 +1896,10 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_nodes_items_y"></a>1.4.1.1.1.2.4.1.2.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`
 
@@ -1858,6 +1910,11 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
+
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_start"></a>1.4.1.1.1.2.4.1.2.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > start`
 
 **Title:** Start Position (Ticks)
@@ -1866,6 +1923,11 @@ Must be one of:
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | Yes       |
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i0_type"></a>1.4.1.1.1.2.4.1.2.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Anchor Parameter Curve > type`
 
@@ -1904,6 +1966,11 @@ Specific value: `"anchor"`
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | Yes       |
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_transform_items_oneOf_i1_step"></a>1.4.1.1.1.2.4.1.2.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > transform > Parameter Curve > oneOf > Free Parameter Curve > step`
 
@@ -1956,6 +2023,11 @@ Specific value: `"free"`
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | No        |
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original"></a>1.4.1.1.1.2.4.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original`
 
@@ -2072,9 +2144,10 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_nodes_items_y"></a>1.4.1.1.1.2.4.1.3.1.1.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > nodes > Anchor Node > y`
 
@@ -2085,6 +2158,11 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
+
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_start"></a>1.4.1.1.1.2.4.1.3.1.1.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > start`
 
 **Title:** Start Position (Ticks)
@@ -2093,6 +2171,11 @@ Must be one of:
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | Yes       |
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i0_type"></a>1.4.1.1.1.2.4.1.3.1.1.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Anchor Parameter Curve > type`
 
@@ -2131,6 +2214,11 @@ Specific value: `"anchor"`
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | Yes       |
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_params_additionalProperties_original_items_oneOf_i1_step"></a>1.4.1.1.1.2.4.1.3.1.2.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > params > Parameter > original > Parameter Curve > oneOf > Free Parameter Curve > step`
 
@@ -2183,6 +2271,11 @@ Specific value: `"free"`
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | No        |
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_sources"></a>1.4.1.1.1.2.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > sources`
 
@@ -2237,9 +2330,10 @@ Specific value: `"free"`
 
 **Description:** The clipped length relative to `clipStart`
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_time_clipStart"></a>1.4.1.1.1.2.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipStart`
 
@@ -2252,9 +2346,10 @@ Specific value: `"free"`
 
 **Description:** The clipped length relative to `start`
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_time_length"></a>1.4.1.1.1.2.6.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > length`
 
@@ -2267,9 +2362,10 @@ Specific value: `"free"`
 
 **Description:** The actual length of the content in the clip
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_time_start"></a>1.4.1.1.1.2.6.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > start`
 
@@ -2281,6 +2377,11 @@ Specific value: `"free"`
 | **Required** | Yes       |
 
 **Description:** The start position of the content in the clip in the timeline
+
+| Restrictions |                  |
+| ------------ | ---------------- |
+| **Minimum**  | &ge; -2147483648 |
+| **Maximum**  | &le; 2147483647  |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_type"></a>1.4.1.1.1.2.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > type`
 

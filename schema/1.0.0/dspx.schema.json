@@ -86,23 +86,28 @@
                 "clipLen": {
                     "description": "The clipped length relative to `clipStart`",
                     "minimum": 0,
+                    "maximum": 2147483647,
                     "title": "Clipped Length (Ticks)",
                     "type": "integer"
                 },
                 "clipStart": {
                     "description": "The clipped length relative to `start`",
                     "minimum": 0,
+                    "maximum": 2147483647,
                     "title": "Clipped Start (Ticks)",
                     "type": "integer"
                 },
                 "length": {
                     "description": "The actual length of the content in the clip",
                     "minimum": 0,
+                    "maximum": 2147483647,
                     "title": "Length (Ticks)",
                     "type": "integer"
                 },
                 "start": {
                     "description": "The start position of the content in the clip in the timeline",
+                    "minimum": -2147483648,
+                    "maximum": 2147483647,
                     "title": "Start Position (Ticks)",
                     "type": "integer"
                 }
@@ -121,6 +126,7 @@
             "properties": {
                 "pos": {
                     "minimum": 0,
+                    "maximum": 2147483647,
                     "title": "Position (Ticks)",
                     "type": "integer"
                 },
@@ -177,6 +183,7 @@
                 },
                 "length": {
                     "minimum": 0,
+                    "maximum": 2147483647,
                     "title": "Length (Ticks)",
                     "type": "integer"
                 },
@@ -211,6 +218,7 @@
                 },
                 "pos": {
                     "minimum": 0,
+                    "maximum": 2147483647,
                     "title": "Position (Ticks)",
                     "type": "integer"
                 },
@@ -238,6 +246,7 @@
                     "properties": {
                         "amp": {
                             "minimum": 0,
+                            "maximum": 2147483647,
                             "title": "Amplitude (Cent)",
                             "type": "integer"
                         },
@@ -254,6 +263,8 @@
                         },
                         "offset": {
                             "title": "Offset of Tune (Cent)",
+                            "maximum": 2147483647,
+                            "minimum": -2147483648,
                             "type": "integer"
                         },
                         "phase": {
@@ -369,11 +380,14 @@
                             },
                             "x": {
                                 "minimum": 0,
+                                "maximum": 2147483647,
                                 "title": "X Position (Ticks)",
                                 "type": "integer"
                             },
                             "y": {
                                 "title": "Y Position (Parameter Value)",
+                                "minimum": -2147483648,
+                                "maximum": 2147483647,
                                 "type": "integer"
                             }
                         },
@@ -389,6 +403,8 @@
                     "type": "array"
                 },
                 "start": {
+                    "minimum": -2147483648,
+                    "maximum": 2147483647,
                     "title": "Start Position (Ticks)",
                     "type": "integer"
                 },
@@ -410,6 +426,8 @@
             "additionalProperties": false,
             "properties": {
                 "start": {
+                    "minimum": -2147483648,
+                    "maximum": 2147483647,
                     "title": "Start Position (Ticks)",
                     "type": "integer"
                 },
@@ -426,7 +444,9 @@
                 "values": {
                     "items": {
                         "title": "Parameter Value",
-                        "type": "integer"
+                        "type": "integer",
+                        "minimum": -2147483648,
+                        "maximum": 2147483647
                     },
                     "title": "Value List",
                     "type": "array"
@@ -457,7 +477,9 @@
                 },
                 "start": {
                     "title": "Start Position (Milliseconds from Note On)",
-                    "type": "integer"
+                    "type": "integer",
+                    "minimum": -2147483648,
+                    "maximum": 2147483647
                 },
                 "token": {
                     "title": "Phoneme Token",
@@ -539,6 +561,7 @@
             "properties": {
                 "pos": {
                     "minimum": 0,
+                    "maximum": 2147483647,
                     "title": "Position (Ticks)",
                     "type": "integer"
                 },
@@ -576,11 +599,13 @@
                 },
                 "index": {
                     "minimum": 0,
+                    "maximum": 2147483647,
                     "title": "Measure number (0-based)",
                     "type": "integer"
                 },
                 "numerator": {
                     "minimum": 1,
+                    "maximum": 2147483647,
                     "title": "Numerator",
                     "type": "integer"
                 }
