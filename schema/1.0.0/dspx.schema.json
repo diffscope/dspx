@@ -616,7 +616,6 @@
             },
             "required": [
                 "clips",
-                "color",
                 "control",
                 "name",
                 "workspace"
