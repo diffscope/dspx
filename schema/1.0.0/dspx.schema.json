@@ -91,7 +91,7 @@
                     "type": "integer"
                 },
                 "clipStart": {
-                    "description": "The clipped length relative to `start`",
+                    "description": "The clipped length relative to `pos`",
                     "minimum": 0,
                     "maximum": 2147483647,
                     "title": "Clipped Start (Ticks)",
@@ -104,11 +104,11 @@
                     "title": "Length (Ticks)",
                     "type": "integer"
                 },
-                "start": {
-                    "description": "The start position of the content in the clip in the timeline",
-                    "minimum": -2147483648,
+                "pos": {
+                    "description": "The position of the the clip in the timeline",
+                    "minimum": 0,
                     "maximum": 2147483647,
-                    "title": "Start Position (Ticks)",
+                    "title": "Position (Ticks)",
                     "type": "integer"
                 }
             },
@@ -116,7 +116,7 @@
                 "clipLen",
                 "clipStart",
                 "length",
-                "start"
+                "pos"
             ],
             "title": "Clip Time",
             "type": "object"

@@ -41,7 +41,7 @@
               - [1.4.1.1.1.1.4.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipLen`](#content_tracks_items_clips_items_oneOf_i0_time_clipLen)
               - [1.4.1.1.1.1.4.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipStart`](#content_tracks_items_clips_items_oneOf_i0_time_clipStart)
               - [1.4.1.1.1.1.4.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > length`](#content_tracks_items_clips_items_oneOf_i0_time_length)
-              - [1.4.1.1.1.1.4.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > start`](#content_tracks_items_clips_items_oneOf_i0_time_start)
+              - [1.4.1.1.1.1.4.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > pos`](#content_tracks_items_clips_items_oneOf_i0_time_pos)
             - [1.4.1.1.1.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > type`](#content_tracks_items_clips_items_oneOf_i0_type)
             - [1.4.1.1.1.1.6. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > workspace`](#content_tracks_items_clips_items_oneOf_i0_workspace)
               - [1.4.1.1.1.1.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > workspace > Workspace Item`](#content_tracks_items_clips_items_oneOf_i0_workspace_additionalProperties)
@@ -149,7 +149,7 @@
               - [1.4.1.1.1.2.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipLen`](#content_tracks_items_clips_items_oneOf_i1_time_clipLen)
               - [1.4.1.1.1.2.6.2. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipStart`](#content_tracks_items_clips_items_oneOf_i1_time_clipStart)
               - [1.4.1.1.1.2.6.3. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > length`](#content_tracks_items_clips_items_oneOf_i1_time_length)
-              - [1.4.1.1.1.2.6.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > start`](#content_tracks_items_clips_items_oneOf_i1_time_start)
+              - [1.4.1.1.1.2.6.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > pos`](#content_tracks_items_clips_items_oneOf_i1_time_pos)
             - [1.4.1.1.1.2.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > type`](#content_tracks_items_clips_items_oneOf_i1_type)
             - [1.4.1.1.1.2.8. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > workspace`](#content_tracks_items_clips_items_oneOf_i1_workspace)
               - [1.4.1.1.1.2.8.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > workspace > Workspace Item`](#content_tracks_items_clips_items_oneOf_i1_workspace_additionalProperties)
@@ -737,7 +737,7 @@ Must be one of:
 | + [clipLen](#content_tracks_items_clips_items_oneOf_i0_time_clipLen )     | No      | integer | No         | -          | Clipped Length (Ticks) |
 | + [clipStart](#content_tracks_items_clips_items_oneOf_i0_time_clipStart ) | No      | integer | No         | -          | Clipped Start (Ticks)  |
 | + [length](#content_tracks_items_clips_items_oneOf_i0_time_length )       | No      | integer | No         | -          | Length (Ticks)         |
-| + [start](#content_tracks_items_clips_items_oneOf_i0_time_start )         | No      | integer | No         | -          | Start Position (Ticks) |
+| + [pos](#content_tracks_items_clips_items_oneOf_i0_time_pos )             | No      | integer | No         | -          | Position (Ticks)       |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i0_time_clipLen"></a>1.4.1.1.1.1.4.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > clipLen`
 
@@ -764,7 +764,7 @@ Must be one of:
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-**Description:** The clipped length relative to `start`
+**Description:** The clipped length relative to `pos`
 
 | Restrictions |                 |
 | ------------ | --------------- |
@@ -787,21 +787,21 @@ Must be one of:
 | **Minimum**  | &ge; 0          |
 | **Maximum**  | &le; 2147483647 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i0_time_start"></a>1.4.1.1.1.1.4.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i0_time_pos"></a>1.4.1.1.1.1.4.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > time > pos`
 
-**Title:** Start Position (Ticks)
+**Title:** Position (Ticks)
 
 |              |           |
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-**Description:** The start position of the content in the clip in the timeline
+**Description:** The position of the the clip in the timeline
 
-| Restrictions |                  |
-| ------------ | ---------------- |
-| **Minimum**  | &ge; -2147483648 |
-| **Maximum**  | &le; 2147483647  |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i0_type"></a>1.4.1.1.1.1.5. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Audio Clip > type`
 
@@ -2317,7 +2317,7 @@ Specific value: `"free"`
 | + [clipLen](#content_tracks_items_clips_items_oneOf_i1_time_clipLen )     | No      | integer | No         | -          | Clipped Length (Ticks) |
 | + [clipStart](#content_tracks_items_clips_items_oneOf_i1_time_clipStart ) | No      | integer | No         | -          | Clipped Start (Ticks)  |
 | + [length](#content_tracks_items_clips_items_oneOf_i1_time_length )       | No      | integer | No         | -          | Length (Ticks)         |
-| + [start](#content_tracks_items_clips_items_oneOf_i1_time_start )         | No      | integer | No         | -          | Start Position (Ticks) |
+| + [pos](#content_tracks_items_clips_items_oneOf_i1_time_pos )             | No      | integer | No         | -          | Position (Ticks)       |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_time_clipLen"></a>1.4.1.1.1.2.6.1. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > clipLen`
 
@@ -2344,7 +2344,7 @@ Specific value: `"free"`
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-**Description:** The clipped length relative to `start`
+**Description:** The clipped length relative to `pos`
 
 | Restrictions |                 |
 | ------------ | --------------- |
@@ -2367,21 +2367,21 @@ Specific value: `"free"`
 | **Minimum**  | &ge; 0          |
 | **Maximum**  | &le; 2147483647 |
 
-###### <a name="content_tracks_items_clips_items_oneOf_i1_time_start"></a>1.4.1.1.1.2.6.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > start`
+###### <a name="content_tracks_items_clips_items_oneOf_i1_time_pos"></a>1.4.1.1.1.2.6.4. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > time > pos`
 
-**Title:** Start Position (Ticks)
+**Title:** Position (Ticks)
 
 |              |           |
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-**Description:** The start position of the content in the clip in the timeline
+**Description:** The position of the the clip in the timeline
 
-| Restrictions |                  |
-| ------------ | ---------------- |
-| **Minimum**  | &ge; -2147483648 |
-| **Maximum**  | &le; 2147483647  |
+| Restrictions |                 |
+| ------------ | --------------- |
+| **Minimum**  | &ge; 0          |
+| **Maximum**  | &le; 2147483647 |
 
 ###### <a name="content_tracks_items_clips_items_oneOf_i1_type"></a>1.4.1.1.1.2.7. Property `DiffScope Project Exchange Format > content > tracks > Track > clips > Clip > oneOf > Singing Clip > type`
 

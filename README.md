@@ -5,7 +5,7 @@ DiffScope Project Exchange Format, Version 1.0.0
 | Property            | Value                                                      |
 |---------------------|------------------------------------------------------------|
 | Filename extension  | `.dspx`                                                    |
-| MIME type           | `vnd.openvpi.dspx+json`                                    |
+| MIME type           | `application/vnd.openvpi.dspx+json`                        |
 | Apple UTI           | `org.diffscope.dspx`                                       |
 | Extended from       | JSON                                                       |
 | JSON Schema         | <https://dspx.diffscope.org/schema/1.0.0/dspx.schema.json> |
@@ -17,6 +17,10 @@ This format is currently in development and subject to change.
 [Documentation (HTML)](docs/1.0.0/index.html)
 
 [Documentation (Markdown)](docs/1.0.0/schema_doc.md)
+
+[Diagram of DSPX Clip Time](docs/1.0.0/diagram_of_dspx_clip_time.svg)
+
+[Parameter Interpolation Algorithm](docs/1.0.0/parameter_interpolation_algorithm.md)
 
 ## Tools
 
