@@ -85,29 +85,29 @@
             "properties": {
                 "clipLen": {
                     "description": "The clipped length relative to `clipStart`",
-                    "minimum": 0,
                     "maximum": 2147483647,
+                    "minimum": 0,
                     "title": "Clipped Length (Ticks)",
                     "type": "integer"
                 },
                 "clipStart": {
                     "description": "The clipped length relative to `pos`",
-                    "minimum": 0,
                     "maximum": 2147483647,
+                    "minimum": 0,
                     "title": "Clipped Start (Ticks)",
                     "type": "integer"
                 },
                 "length": {
                     "description": "The actual length of the content in the clip",
-                    "minimum": 0,
                     "maximum": 2147483647,
+                    "minimum": 0,
                     "title": "Length (Ticks)",
                     "type": "integer"
                 },
                 "pos": {
                     "description": "The position of the the clip in the timeline",
-                    "minimum": 0,
                     "maximum": 2147483647,
+                    "minimum": 0,
                     "title": "Position (Ticks)",
                     "type": "integer"
                 }
@@ -119,27 +119,6 @@
                 "pos"
             ],
             "title": "Clip Time",
-            "type": "object"
-        },
-        "label": {
-            "additionalProperties": false,
-            "properties": {
-                "pos": {
-                    "minimum": 0,
-                    "maximum": 2147483647,
-                    "title": "Position (Ticks)",
-                    "type": "integer"
-                },
-                "text": {
-                    "title": "Text",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "pos",
-                "text"
-            ],
-            "title": "Label",
             "type": "object"
         },
         "controlPoints": {
@@ -165,6 +144,84 @@
             "title": "Control Points",
             "type": "array"
         },
+        "dynamicMixingAnchor": {
+            "additionalProperties": false,
+            "properties": {
+                "pos": {
+                    "maximum": 2147483647,
+                    "minimum": 0,
+                    "title": "Position (Ticks)",
+                    "type": "integer"
+                },
+                "ratio": {
+                    "$ref": "#/$defs/sourceMixingRatio"
+                }
+            },
+            "required": [
+                "pos",
+                "ratio"
+            ],
+            "title": "Dynamic Mixing Anchor",
+            "type": "object"
+        },
+        "label": {
+            "additionalProperties": false,
+            "properties": {
+                "pos": {
+                    "maximum": 2147483647,
+                    "minimum": 0,
+                    "title": "Position (Ticks)",
+                    "type": "integer"
+                },
+                "text": {
+                    "title": "Text",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "pos",
+                "text"
+            ],
+            "title": "Label",
+            "type": "object"
+        },
+        "mixedSinger": {
+            "additionalProperties": false,
+            "properties": {
+                "extra": {
+                    "description": "Any JSON value (implementation-specific)",
+                    "title": "Extra"
+                },
+                "ratio": {
+                    "$ref": "#/$defs/sourceMixingRatio"
+                },
+                "singers": {
+                    "items": {
+                        "$ref": "#/$defs/singer"
+                    },
+                    "minItems": 1,
+                    "title": "Singers",
+                    "type": "array"
+                },
+                "type": {
+                    "const": "mixed",
+                    "title": "Singer Type",
+                    "type": "string"
+                },
+                "workspace": {
+                    "$ref": "#/$defs/workspace"
+                }
+            },
+            "required": [
+                "extra",
+                "ratio",
+                "singers",
+                "type",
+                "workspace"
+            ],
+            "title": "Mixed Singer",
+            "type": "object"
+        },
         "note": {
             "additionalProperties": false,
             "properties": {
@@ -182,8 +239,8 @@
                     "type": "string"
                 },
                 "length": {
-                    "minimum": 0,
                     "maximum": 2147483647,
+                    "minimum": 0,
                     "title": "Length (Ticks)",
                     "type": "integer"
                 },
@@ -217,8 +274,8 @@
                     "type": "object"
                 },
                 "pos": {
-                    "minimum": 0,
                     "maximum": 2147483647,
+                    "minimum": 0,
                     "title": "Position (Ticks)",
                     "type": "integer"
                 },
@@ -245,8 +302,8 @@
                     "additionalProperties": false,
                     "properties": {
                         "amp": {
-                            "minimum": 0,
                             "maximum": 2147483647,
+                            "minimum": 0,
                             "title": "Amplitude (Cent)",
                             "type": "integer"
                         },
@@ -262,9 +319,9 @@
                             "type": "number"
                         },
                         "offset": {
-                            "title": "Offset of Tune (Cent)",
                             "maximum": 2147483647,
                             "minimum": -2147483648,
+                            "title": "Offset of Tune (Cent)",
                             "type": "integer"
                         },
                         "phase": {
@@ -334,13 +391,13 @@
                     "$ref": "#/$defs/paramCurveList",
                     "title": "Edited Parameter Curves"
                 },
-                "transform": {
-                    "$ref": "#/$defs/paramCurveList",
-                    "title": "Transform Parameter Curves"
-                },
                 "original": {
                     "$ref": "#/$defs/paramCurveList",
                     "title": "Original Parameter Curves"
+                },
+                "transform": {
+                    "$ref": "#/$defs/paramCurveList",
+                    "title": "Transform Parameter Curves"
                 }
             },
             "required": [
@@ -379,15 +436,15 @@
                                 "type": "string"
                             },
                             "x": {
-                                "minimum": 0,
                                 "maximum": 2147483647,
+                                "minimum": 0,
                                 "title": "X Position (Ticks)",
                                 "type": "integer"
                             },
                             "y": {
-                                "title": "Y Position (Parameter Value)",
-                                "minimum": -2147483648,
                                 "maximum": 2147483647,
+                                "minimum": -2147483648,
+                                "title": "Y Position (Parameter Value)",
                                 "type": "integer"
                             }
                         },
@@ -403,8 +460,8 @@
                     "type": "array"
                 },
                 "start": {
-                    "minimum": -2147483648,
                     "maximum": 2147483647,
+                    "minimum": -2147483648,
                     "title": "Start Position (Ticks)",
                     "type": "integer"
                 },
@@ -426,8 +483,8 @@
             "additionalProperties": false,
             "properties": {
                 "start": {
-                    "minimum": -2147483648,
                     "maximum": 2147483647,
+                    "minimum": -2147483648,
                     "title": "Start Position (Ticks)",
                     "type": "integer"
                 },
@@ -443,10 +500,10 @@
                 },
                 "values": {
                     "items": {
-                        "title": "Parameter Value",
-                        "type": "integer",
+                        "maximum": 2147483647,
                         "minimum": -2147483648,
-                        "maximum": 2147483647
+                        "title": "Parameter Value",
+                        "type": "integer"
                     },
                     "title": "Value List",
                     "type": "array"
@@ -475,19 +532,19 @@
                     "title": "Language (ISO 639-3 Code)",
                     "type": "string"
                 },
+                "onset": {
+                    "title": "Onset Flag",
+                    "type": "boolean"
+                },
                 "start": {
-                    "title": "Start Position (Milliseconds from Note On)",
-                    "type": "integer",
+                    "maximum": 2147483647,
                     "minimum": -2147483648,
-                    "maximum": 2147483647
+                    "title": "Start Position (Milliseconds from Note On)",
+                    "type": "integer"
                 },
                 "token": {
                     "title": "Phoneme Token",
                     "type": "string"
-                },
-                "onset": {
-                    "title": "Onset Flag",
-                    "type": "boolean"
                 }
             },
             "required": [
@@ -498,6 +555,17 @@
             ],
             "title": "Phoneme",
             "type": "object"
+        },
+        "singer": {
+            "oneOf": [
+                {
+                    "$ref": "#/$defs/singleSinger"
+                },
+                {
+                    "$ref": "#/$defs/mixedSinger"
+                }
+            ],
+            "title": "Singer"
         },
         "singingClip": {
             "additionalProperties": false,
@@ -524,12 +592,16 @@
                     "type": "object"
                 },
                 "sources": {
-                    "additionalProperties": {
-                        "title": "Source",
-                        "type": "object"
-                    },
-                    "title": "Sources",
-                    "type": "object"
+                    "oneOf": [
+                        {
+                            "$ref": "#/$defs/sources"
+                        },
+                        {
+                            "title": "Empty Sources",
+                            "type": "null"
+                        }
+                    ],
+                    "title": "Sources"
                 },
                 "time": {
                     "$ref": "#/$defs/clipTime"
@@ -556,12 +628,80 @@
             "title": "Singing Clip",
             "type": "object"
         },
+        "singleSinger": {
+            "additionalProperties": false,
+            "properties": {
+                "extra": {
+                    "description": "Any JSON value (implementation-specific)",
+                    "title": "Extra"
+                },
+                "id": {
+                    "title": "Singer Identifier",
+                    "type": "string"
+                },
+                "type": {
+                    "const": "single",
+                    "title": "Singer Type",
+                    "type": "string"
+                },
+                "workspace": {
+                    "$ref": "#/$defs/workspace"
+                }
+            },
+            "required": [
+                "extra",
+                "id",
+                "type",
+                "workspace"
+            ],
+            "title": "Single Singer",
+            "type": "object"
+        },
+        "sourceMixingRatio": {
+            "description": "This array must satisfy the following conditions: 1) 0 <= each item <= 1; 2) Sum(each item) <= 1; 3) Length + 1 equals to the number of singers in the context.",
+            "items": {
+                "type": "number"
+            },
+            "title": "Source Mixing Ratio",
+            "type": "array"
+        },
+        "sources": {
+            "additionalProperties": false,
+            "properties": {
+                "category": {
+                    "title": "Synthesis Category",
+                    "type": "string"
+                },
+                "mix": {
+                    "items": {
+                        "$ref": "#/$defs/dynamicMixingAnchor"
+                    },
+                    "title": "Dynamic Mixing Anchors",
+                    "type": "array"
+                },
+                "singers": {
+                    "items": {
+                        "$ref": "#/$defs/singer"
+                    },
+                    "minItems": 1,
+                    "title": "Singers",
+                    "type": "array"
+                }
+            },
+            "required": [
+                "category",
+                "mix",
+                "singers"
+            ],
+            "title": "Sources",
+            "type": "object"
+        },
         "tempo": {
             "additionalProperties": false,
             "properties": {
                 "pos": {
-                    "minimum": 0,
                     "maximum": 2147483647,
+                    "minimum": 0,
                     "title": "Position (Ticks)",
                     "type": "integer"
                 },
@@ -598,14 +738,14 @@
                     "type": "integer"
                 },
                 "index": {
-                    "minimum": 0,
                     "maximum": 2147483647,
+                    "minimum": 0,
                     "title": "Measure number (0-based)",
                     "type": "integer"
                 },
                 "numerator": {
-                    "minimum": 1,
                     "maximum": 2147483647,
+                    "minimum": 1,
                     "title": "Numerator",
                     "type": "integer"
                 }
