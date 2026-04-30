@@ -34,31 +34,15 @@ Defined as:
 
 $$f_b = \begin{cases} 0 & \text{if } \delta_l \cdot \delta_r \le 0 \\ \frac{3(h_l + h_r)}{\frac{2h_r + h_l}{\delta_l} + \frac{h_r + 2h_l}{\delta_r}} & \text{if } \delta_l \cdot \delta_r > 0 \end{cases}$$ 
 
-Define the **left endpoint derivative estimation function** $f_L(x_0, y_0, x_1, y_1, x_2, y_2)$: 
-
-Let: 
-
-$$h_1 = x_1 - x_0, \quad h_2 = x_2 - x_1$$ 
-
-$$\delta_1 = \Delta(x_0, y_0, x_1, y_1), \quad \delta_2 = \Delta(x_1, y_1, x_2, y_2)$$ 
-
-$$d = \frac{(2h_1 + h_2)\delta_1 - h_1\delta_2}{h_1 + h_2}$$ 
-
-Defined as: 
-
-$$f_L = \begin{cases} 0 & \text{if } d \cdot \delta_1 \le 0 \\ 3\delta_1 & \text{if } \delta_1 \cdot \delta_2 \le 0 \text{ and } |d| > |3\delta_1| \\ d & \text{otherwise} \end{cases}$$ 
-
-The **right endpoint derivative estimation function** $f_R(x_{n-2}, y_{n-2}, x_{n-1}, y_{n-1}, x_n, y_n)$ is defined in a manner symmetrical to $f_L$. 
-
 ### Calculations 
 
 Calculate $d_1$: 
 
-$$\begin{equation} d_1 = \begin{cases} fb(x_{ref1}, y_{ref1}, x_1, y_1, x_2, y_2) & \text{if } P_{ref1} \text{ exists} \\ f_L(x_1, y_1, x_2, y_2, x_{ref2}, y_{ref2}) & \text{if only } P_{ref2} \text{ exists} \\ \Delta(x_1, y_1, x_2, y_2) & \text{if both do not exist} \end{cases} \end{equation}$$
+$$\begin{equation} d_1 = \begin{cases} fb(x_{ref1}, y_{ref1}, x_1, y_1, x_2, y_2) & \text{if } P_{ref1} \text{ exists} \\ \Delta(x_1, y_1, x_2, y_2) & \text{otherwise} \end{cases} \end{equation}$$
 
 Calculate $d_2$: 
 
-$$\begin{equation} d_2 = \begin{cases} fb(x_1, y_1, x_2, y_2, x_{ref2}, y_{ref2}) & \text{if } P_{ref2} \text{ exists} \\ f_R(x_{ref1}, y_{ref1}, x_1, y_1, x_2, y_2) & \text{if only } P_{ref1} \text{ exists} \\ \Delta(x_1, y_1, x_2, y_2) & \text{if both do not exist} \end{cases} \end{equation}$$
+$$\begin{equation} d_2 = \begin{cases} fb(x_1, y_1, x_2, y_2, x_{ref2}, y_{ref2}) & \text{if } P_{ref2} \text{ exists} \\ \Delta(x_1, y_1, x_2, y_2) & \text{otherwise} \end{cases} \end{equation}$$
 
 Next, based on the endpoint coordinates and derivatives $(x_1, y_1, d_1)$ and $(x_2, y_2, d_2)$, calculate the **intermediate parameters**: 
 
