@@ -5,9 +5,9 @@ DiffScope Project Exchange Format, Version 1.0.0
 | Property            | Value                                                                                                                |
 |---------------------|----------------------------------------------------------------------------------------------------------------------|
 | Filename extension  | `.dspx`                                                                                                              |
-| MIME type           | `application/vnd.openvpi.dspx+json` (Uncompressed) </br> `application/x.diffscope.compressed-dspx+zstd` (Compressed) |
+| MIME type           | `application/vnd.openvpi.dspx+json` (Uncompressed) <br/> `application/x.diffscope.compressed-dspx+zstd` (Compressed) |
 | Apple UTI           | `org.diffscope.dspx`                                                                                                 |
-| Extended from       | JSON (Uncompressed) </br> Zstd (Compressed)                                                                          |
+| Extended from       | JSON (Uncompressed) <br/> Zstd (Compressed)                                                                          |
 | JSON Schema         | <https://dspx.diffscope.org/schema/1.0.0/dspx.schema.json>                                                           |
 
 This format is currently in development and subject to change.
