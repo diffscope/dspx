@@ -10,8 +10,6 @@ DiffScope Project Exchange Format, Version 1.0.0
 | Extended from       | JSON (Uncompressed) <br/> Zstd (Compressed)                                                                          |
 | JSON Schema         | <https://dspx.diffscope.org/schema/1.0.0/dspx.schema.json>                                                           |
 
-This format is currently in development and subject to change.
-
 ## Reference
 
 [Documentation (HTML)](docs/1.0.0/index.html)
